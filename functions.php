@@ -3,8 +3,7 @@
 
 add_action('after_setup_theme', 'portfolio_setup');
 add_action('init','create_post_type');
-add_action('wp_enqueue_scripts', 'my_scripts_method');
-
+add_filter('excerpt_more', 'new_excerpt_more');
 
 
 
@@ -71,20 +70,13 @@ if(!function_exists('create_post_type')){
                     )
                 );		
     }
+	
+	
 }
 
-function my_scripts_method() {
-	wp_enqueue_script(
-		'custom_script',
-		get_template_directory_uri() . '/js/jquery-1.8.2.js',
-		array('jquery')
-	);
-	
-	wp_enqueue_script(
-		'custom_script',
-		get_template_directory_uri() . '/js/script.js',
-		array('jquery')
-	);
-	
+function new_excerpt_more($more) {
+       global $post;
+	return ' <a href="'. get_permalink($post->ID) . '">Lire la suite...</a>';
 }
+
 

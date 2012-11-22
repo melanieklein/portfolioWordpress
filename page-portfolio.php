@@ -1,107 +1,86 @@
 <?php remove_filter('the_content','wpautop');
 get_header();
-?>
 
-            <section id="contenuPortfolio">
+if(have_posts):
+			while(have_posts()):
+			the_post();?>
+			<section id="contenuPortfolio">
+			<?php the_content();
+			endwhile;
+			endif;?>
+
 			<header>
                     <h1>Mon travail</h1>
                 </header>
 				
 				<section id="categories">
 					<section id="catWeb">
-						<section class="iconeCat">
-							<a href="http://localhost/wordpress/wp-content/uploads/2012/10/catWeb.png"><img src="http://localhost/wordpress/wp-content/uploads/2012/10/catWeb.png" alt="" title="catWeb" width="363" height="363" class="alignnone size-full wp-image-106" /></a>
+						<section class="iconeCat" id="graphismeCat">
+							<img class="imageRetina" src="http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2012/11/catWeb.png" alt="Icone catégorie web" title="Catégorie web" width="309" height="310" class="alignnone size-full wp-image-165" />
 						</section>
-						<section class="imagesPortfolio">
-						<ul>
-						<li><a href="http://localhost/wordpress/wp-content/uploads/2012/10/imgPort.png"><img src="http://localhost/wordpress/wp-content/uploads/2012/10/imgPort.png" alt="" title="imgPort" width="150" height="211" class="alignnone size-full wp-image-109" />
-						<figcaption>
-                            <h3>Visuel de site web</h3>
-                            <p>Site sur le maquillage avec un thème imposé&nbsp;: la féminité.</p>                            
-                        </figcaption>
-						</a></li>
-						<li><a href="http://localhost/wordpress/wp-content/uploads/2012/10/imgPort.png"><img src="http://localhost/wordpress/wp-content/uploads/2012/10/imgPort.png" alt="" title="imgPort" width="150" height="211" class="alignnone size-full wp-image-109" /><figcaption>
-                            <h3>Visuel de site web</h3>
-                            <p>Site sur le maquillage avec un thème imposé&nbsp;: la féminité.</p>                            
-                        </figcaption></a></li>
-						<li><a href="http://localhost/wordpress/wp-content/uploads/2012/10/imgPort.png"><img src="http://localhost/wordpress/wp-content/uploads/2012/10/imgPort.png" alt="" title="imgPort" width="150" height="211" class="alignnone size-full wp-image-109" /><figcaption>
-                            <h3>Visuel de site web</h3>
-                            <p>Site sur le maquillage avec un thème imposé&nbsp;: la féminité.</p>                            
-                        </figcaption></a></li>
-						</ul>
+						<section id="conteneurSlider">
+							<section class="button" id="leftButton">
+								<button><</button>
+							</section>
+							<section id ="carousel" class="imagesPortfolio">
+							
+							
+
+							<ul id="many" class="clearfix">
+								<?php
+								$loop = new WP_query(array('post_type'=>'works'));
+								
+								if($loop->have_posts()):
+								while($loop->have_posts()):
+								$loop->the_post();
+								$postId = get_the_ID();
+								$thumb = wp_get_attachment_image_src(get_post_thumbnail_id($postId->ID), 'full');
+								$url = $thumb['0'];
+								$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
+								?>
+								<li><a class="thumbnail" href="<?= $url; ?>"><?php the_post_thumbnail('medium');?></a>
+								<figcaption>		                            
+		                            <p><?php the_content();?></p>                            
+		                        </figcaption>
+								</li>								
+		                        <?php endwhile;
+								endif;?>
+							</ul>
+							
+							</section>
+							<section class="button" id="rightButton">
+								<button>></button>
+							</section>
 						</section>
 					</section>
 					
 					
 					<section id="catGraph">
 						<section class="iconeCat">
-							<a href="http://localhost/wordpress/wp-content/uploads/2012/10/catGraph1.png"><img src="http://localhost/wordpress/wp-content/uploads/2012/10/catGraph1.png" alt="" title="catGraph" width="364" height="363" class="alignnone size-full wp-image-112" /></a>
+							<img class="imageRetina" src="http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2012/11/catGraph.png" alt="Icone catégorie graphisme" title="Catégorie graphisme" width="243" height="242" class="alignnone size-full wp-image-160" />
 						</section>
 						<section class="imagesPortfolio">
 						<ul>
-						<li><a href="http://localhost/wordpress/wp-content/uploads/2012/10/01.png"><img src="http://localhost/wordpress/wp-content/uploads/2012/10/01.png" alt="" title="01" width="150" height="211" class="alignnone size-full wp-image-114" /></a>
+						<li><a href="http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2012/10/gabaritTravail.png"><img class="imageRetina" src="http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2012/10/gabaritTravail.png" alt="" title="En attendant les travaux" width="300" height="422" class="alignnone size-full wp-image-164" /></a>
 						<figcaption>
                             <h3>Créations infographiques 2D</h3>
                             <p>Affiche d'un festival au choix</p>                            
                         </figcaption>
-						</a></li>
-						<li><a href="http://localhost/wordpress/wp-content/uploads/2012/10/02.png"><img src="http://localhost/wordpress/wp-content/uploads/2012/10/02.png" alt="" title="02" width="150" height="211" class="alignnone size-full wp-image-115" /></a>
+						</li>
+						<li><a href="http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2012/10/gabaritTravail.png"><img class="imageRetina" src="http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2012/10/gabaritTravail.png" alt="" title="En attendant les travaux" width="300" height="422" class="alignnone size-full wp-image-164" /></a>
 						<figcaption>
                             <h3>Logique et Argumentation de l'Image</h3>
                             <p>Création d'une pochette de vinyl d'un groupe/artiste fictif.</p>                            
-                        </figcaption></a></li>
-						<li><a href="http://localhost/wordpress/wp-content/uploads/2012/10/03.png"><img src="http://localhost/wordpress/wp-content/uploads/2012/10/03.png" alt="" title="03" width="153" height="211" class="alignnone size-full wp-image-116" /></a><figcaption>
+                        </figcaption></li>
+						<li><a href="http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2012/10/gabaritTravail.png"><img class="imageRetina" src="http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2012/10/gabaritTravail.png" alt="" title="En attendant les travaux" width="300" height="422" class="alignnone size-full wp-image-164" /></a><figcaption>
                             <h3>Créations infographiques 2D</h3>
                             <p>Intégration d'un personnage sur un fond composé d'éléments situé sur le personnage.</p>                            
-                        </figcaption></a></li>
+                        </figcaption></li>
 						</ul>
 						</section>
 					</section>
 				</section>
-				
-				
-				
-				<!--
-                <ul id="espaceImagesPortfolio">
-                    <li id ="imagePortfolio1" class="imagesPortfolio">
-                        <a href="#"><img src="img/portfolio/siteMaquillage.jpg" width="230" height="230" alt="Image typographie" width="180" height="211" />
-                        <figcaption>
-                            <h3>Visuel de site web</h3>
-                            <p>Site sur le maquillage avec un thème imposé&nbsp;: la féminité.</p>                            
-                        </figcaption></a>
-                        
-                    </li> 
-                    <li id ="imagePortfolio2" class="imagesPortfolio">
-                        <a href="#"><figcaption>
-                            <h3>Visuel de site web</h3>
-                            <p>Site sur le maquillage avec un thème imposé&nbsp;: la féminité.</p>                            
-                        </figcaption><img src="img/portfolio/livreTypo.jpg" width="230" height="230" alt="Image typographie" width="180" height="211" /></a>
-                    </li> 
-                    <li id ="imagePortfolio3" class="imagesPortfolio">
-                        <a href="#"><figcaption>
-                            <h3>Visuel de site web</h3>
-                            <p>Site sur le maquillage avec un thème imposé&nbsp;: la féminité.</p>                            
-                        </figcaption><img src="img/portfolio/carteStvalentin.jpg" width="230" height="230" alt="Image typographie" width="180" height="211" /></a>
-                    </li> 
-                    <li id ="imagePortfolio4" class="imagesPortfolio">
-                        <a href="#"><figcaption>
-                            <h3>Visuel de site web</h3>
-                            <p>Site sur le maquillage avec un thème imposé&nbsp;: la féminité.</p>                            
-                        </figcaption><img src="img/portfolio/vinyl.jpg" width="230" height="230" alt="Image typographie" width="180" height="211" /></a>
-                    </li> 
-                    <li id ="imagePortfolio5" class="imagesPortfolio">
-                        <a href="#"><figcaption>
-                            <h3>Visuel de site web</h3>
-                            <p>Site sur le maquillage avec un thème imposé&nbsp;: la féminité.</p>                            
-                        </figcaption><img src="img/portfolio/gwenstefany.jpg" width="230" height="230" alt="Image typographie" width="180" height="211" /></a>
-                    </li> 
-                    <li id ="imagePortfolio6" class="imagesPortfolio">
-                        <a href="#"><figcaption>
-                            <h3>Visuel de site web</h3>
-                            <p>Site sur le maquillage avec un thème imposé&nbsp;: la féminité.</p>                            
-                        </figcaption><img src="img/portfolio/siteNivea.jpg" width="230" height="230" alt="Image typographie" width="180" height="211" /></a>
-                    </li> 
-                </ul>-->
+
 
 			</section>
 <?php			

@@ -1,6 +1,7 @@
 <?php remove_filter('the_content','wpautop');
-get_header();
-
+get_header();?>
+<section id="contenerBlog">
+			<? 
 			if(have_posts):
 			while(have_posts()):
 			the_post();?>
@@ -24,24 +25,15 @@ get_header();
 		
 		<article class="articles">
 
-                    <section id="imgArticle1" class="imageArticle">
+                    <section class="imageArticle">
 						<?php the_post_thumbnail('thumbnail');?>
                     </section>
                         <section class="contenuArticle">
                             <h1><?php the_title();?></h1>
                             <p class="dateArticle"><?php _e('Publié le')?> <?php echo(get_the_date());?></p>
-                            <p class="texteArticle"><?php the_content();?></p>
+                            <p class="texteArticle"><?php the_excerpt();?></p>
                         </section>
-                    <footer>
-					 <?php get_comments_number();?>
-					<p><a href="#">Commenter</a> | <a href="#"><?php comments_number('0 commentaires','1 commentaire', '% commentaires');?></a></p> 
-					</footer>
-				<section>
-				<?php comment_form();?>
-				</section>
-			
-			
-				</article> 
+		</article> 
 		<?php endwhile;
 			?>
 			</section>
@@ -76,6 +68,18 @@ get_header();
                             <li><a href="#"><?php the_title();?></a></li>
 							<?php endwhile;?>
                         </ul>
+                        <h1 class="moisPublication">novembre 2012</h1>
+						
+                        <ul>
+						<?php
+						$loop = new WP_Query('pagename=articles&monthnum=11');
+						while ($loop->have_posts()): 
+						$loop->the_post();
+					
+					?>
+                            <li><a href="#"><?php the_title();?></a></li>
+							<?php endwhile;?>
+                        </ul>
                         </section>
 						
                     </section>
@@ -95,6 +99,7 @@ get_header();
                 </section>
             </aside>
 				</section>
+			</section>
 
 <?php			
 get_footer();

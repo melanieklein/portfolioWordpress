@@ -13,7 +13,8 @@ while(have_posts()):
 			?>
 			
 				<section id="imageIntro">
-					<section><a href="http://localhost/wordpress/wp-content/uploads/2012/10/imgIntro2.png"><img class="alignnone size-full wp-image-32" title="Image d'introduction" src="http://localhost/wordpress/wp-content/uploads/2012/10/imgIntro2.png" alt="" width="194" height="317" /></a>
+					<section>
+					<img class="imageRetina" src="http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2012/10/bonhommeOmg.png" alt="Bonhomme criant &quot;Oh my god I love design&quot;" title="Oh My God I Love Design" width="386" height="632" class="alignnone size-full wp-image-154" />
 					</section>
 				</section>
 						
@@ -38,7 +39,7 @@ while(have_posts()):
 						$postId = get_the_ID();
 						?>
 
-							<li class="ic_<?php echo get_post_meta($postId,'icone',true);?>"><a class="logos" href="<?php the_content();?>" title="Mon profil" ></a></li>
+							<li class="ic_<?php echo get_post_meta($postId,'icone',true);?>"><a class="logos" href="<?php the_content();?>" title="Mon profil <?php the_title();?>" ></a></li>
 									
 						<?php
 						endwhile;
@@ -47,68 +48,74 @@ while(have_posts()):
 						</ul>
 					</section>
 					
-					<section id="texteIntro">Bienvenue sur mon site perso !Mes deux passions : le
-					<span>webdesign</span> et le <span>graphisme</span>. Je vous invite à consulter
-					mon <a href="portfolio.php">portfolio</a>, parcourir mon <a href="blog.php">blog</a> et à me <a href="contact.php">contacter</a> si
-					vous êtes intéressés par les services que je propose.</section>
+					<section id="texteIntro">
+						<p>Mes deux passions&nbsp;: le <span>webdesign</span> et le <span>graphisme</span>. J'ai aussi des compétences en <span>programmation</span>.</p> 
+						<p>Je vous invite à consulter mon <a href="portfolio">portfolio</a>, parcourir mon <a href="blog">blog</a> et à me <a href="contact">contacter</a> si
+						vous êtes intéressés par les services que je propose.</p>
+						<section id="imgLienPortfolio">
+            		<a href="portfolio"><img class="imageRetina" src="http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2012/11/imgFooter.png" width="300" height="300" alt="Lien pour voir tous mes projets - Portfolio de Mélanie Klein" title="Aller vers le portfolio" /></a>
+        			</section>
+					</section>
 					
-				</section>
+					</section>
 			</section>
 				
+			<section id="ficheProfil">
+<h1>À propos de moi</h1>
+<section id="fiche"><section id="details">
+	<p>Je m'apelle <span>Mélanie</span>, j'ai 21 ans et j'habite en Province de <span>Liège</span>.</p> 
+	<p>Je suis spécialisée dans le <span>Web</span> et j'ai une préférence pour le <span>webdesign</span>, qui me passionne vraiment.</p>
+	<p>J'ai d'autres passions comme la musique, le cinéma, la lecture. Je suis également des cours de guitare
+et je fais du sport deux fois par semaine.</p>
+</section>
+<section id="photoMoi">
+<a href="contact"><img class="imageRetina" src="http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2012/10/moiVecto.png" alt="Portrait vectoriel de Mélanie Klein - lien vers page de contact" title="Contactez moi !" width="681" height="739" class="alignnone size-full wp-image-153" /></a>
+</section>
+</section>
+</section>
+
 				<section id="blocCompetences">
 					<section id="competences">
 						<section id="graphisme">
 							<h2>graphisme / design</h2>
 								<ul>
 								<?php
-								$loop = new WP_query(array('post_type'=>'skills'));
+								$loop = new WP_query(array('post_type'=>'skills', 'posts_per_page'));
 						
 								if($loop->have_posts()):
 								while($loop->have_posts()):
 								$loop->the_post();
 								$postId = get_the_ID();
 								?>
-									<li><?php echo get_post_meta($postId,'nomcompetence',true);?></li>									
+									<li><?php echo get_post_meta($postId,'graphisme',true);?></li>									
 								<?php endwhile;
 								endif;?>
 								</ul>
 						</section>
 						
 						<section id="imageOrdinateur">
-							<a href="http://localhost/wordpress/wp-content/uploads/2012/10/computerImg.png">
-								<img class="alignnone size-full wp-image-35" title="Image computer graphics design" src="http://localhost/wordpress/wp-content/uploads/2012/10/computerImg.png" alt="Computer graphics design" width="331" height="278" />
-							</a>
+							<a href="portfolio"><img class="imageRetina" src="http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2012/10/computerGraphicsDesign.png" alt="Computer Graphics Design - lien vers portfolio" title="Venez voir mon travail !" width="664" height="559" class="alignnone size-full wp-image-151" /></a>
 						</section>
 						
 						<section id="programmation">
 							<h2>programmation</h2>
 							<ul>
-								<li>Html</li>
-								<li>Php</li>
-								<li>Javascript</li>
-								<li>Jquery</li>
-							</ul>
+								<?php
+								$loop = new WP_query(array('post_type'=>'skills', 'posts_per_page'));
+						
+								if($loop->have_posts()):
+								while($loop->have_posts()):
+								$loop->the_post();
+								$postId = get_the_ID();
+								?>
+									<li><?php echo get_post_meta($postId,'progra',true);?></li>									
+								<?php endwhile;
+								endif;?>
+								</ul>
 						</section>
 					</section>
 				</section>
-				  <section id="ficheProfil">
-<h1>Qui suis-je ?</h1>
-<section id="fiche"><section id="details">Je m'apelle Mélanie Klein, j'ai 21 ans et j'habite dans
-un petit village de campagne en Province de Liège. J'ai plusieurs passions:
-la musique, le cinéma, la lecture, je prends des cours de guitare
-et je fais du sport deux fois par semaine.J'entame actuellement
-la 3ème et dernière année du bachelier en Haute Ecole de la
-Province de Liège, option Infographie. J'apprends beaucoup et met en pratique
-mon talent artistique. Je suis spécialisée dans le Web et
-j'ai une préférence pour le design web, qui me passionne
-vraiment.</section>
-<section id="photoMoi">
-<a href="http://localhost/wordpress/wp-content/uploads/2012/10/moi2.png">
-<img class="alignnone size-full wp-image-34" title="Photo de moi" src="http://localhost/wordpress/wp-content/uploads/2012/10/moi2.png" alt="" width="340" height="369" />
-</a>
-</section>
-</section>
-</section>
+				  
 			
 			
 			<?php
