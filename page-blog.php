@@ -1,6 +1,6 @@
 <?php remove_filter('the_content','wpautop');
 get_header();?>
-<section id="contenerBlog">
+<section id="contenerBlog" class="section">
 			<? 
 			if(have_posts):
 			while(have_posts()):

@@ -5,7 +5,7 @@ if(have_posts):
 while(have_posts()):
         the_post();
         ?>
-            <section id="contenuContact">
+            <section id="contenuContact" class="section">
 			<?php the_content();
 			
 			endwhile;
@@ -32,9 +32,10 @@ while(have_posts()):
                     </fieldset>
                 </form>
                 </section>
-                </section>              
+                </section> 
+                <section id="imgContact"><img src="http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2012/11/imgContact.png" alt="Image bonhomme contact"></section>             
                    
-                <section id="map">
+                <!--<section id="map">
                     <section><small>
                         <a href="https://maps.google.be/maps?f=q&amp;source=embed&amp;hl=fr&amp;geocode=&amp;q=Rue+Jeh
                            oge+47+4190+Xhoris&amp;aq=&amp;sll=50.444713,5.61009&amp;sspn=0.006873,0.01929&amp;ie=UTF8&
@@ -65,7 +66,7 @@ while(have_posts()):
                     <?php endwhile;
                     endif;?>
                  
-                </section>
+                </section>-->
 
 
 			</section>

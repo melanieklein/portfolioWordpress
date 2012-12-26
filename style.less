@@ -1,0 +1,1156 @@
+/*
+Theme Name: portfolioWordpress
+Theme URI: http://wordpress.org/extend/themes/twentyeleven
+Author: Mélanie Klein
+Author URI: http://wordpress.org/
+Description: Mon portfolio super bien avec plein de travaux gÃ©niaux
+Version: 0.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: portfolio, melanie, klein, webdesigner, belge
+Text Domain: melanieklein (ptfmela.dreamdesgn.com/wordpress)
+*/
+
+/* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
+-------------------------------------------------------------- */
+@import url(reset.css);
+
+@font-face {
+  font-family: "Hero Light";
+  src: url('polices/Hero Light.otf');
+}
+@font-face {
+  font-family: "Great Vibes Regular";
+  src: url('polices/GreatVibes-Regular.otf');
+}
+@font-face {
+  font-family: "Hero Normal";
+  src: url('polices/Hero.otf');
+}
+
+@font-face {
+	font-family: @leagueGothic;
+	src: url('polices/LeagueGothic-Regular.otf');
+}
+
+@heroNormal: "Hero Normal", Arial, sans-serif;
+@heroLight: "Hero Light";
+@greatVibes: "Great Vibes Regular";
+@leagueGothic: "League Gothic";
+
+@grisClair: #C1C1C1;
+@grisFonce: #555555;
+@rose: #a2185b;
+@blanc: #FFFFFF;
+
+
+body {
+  background-color: #eaeaea;
+  font-family: @heroNormal;
+  font-size: 14px;
+  background-image: url("http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2012/10/motif1.png");
+  background-repeat: repeat;
+  margin: 0 auto;
+  color: @grisFonce;
+}
+
+a {
+  text-decoration:none;
+}
+
+.section {
+  max-width: 74em;
+  min-width: 64em;
+  margin: 0 auto;
+}
+
+/*------------HEADER-----------*/
+#banner {
+  height: 10em;
+  position: relative;
+
+  h2 {
+    font-family: @greatVibes;
+    float: right;
+    font-size: 3em;
+    color: @grisFonce;
+    margin-top: 1.1em;
+    a {
+      color: @rose;
+    }
+  }
+}
+
+#menu {
+  clear: both;
+  margin: 0 auto;
+}
+#navigation {
+    background-color: @blanc;
+    border-top: 1px solid @grisClair;
+    border-bottom: 1px solid @grisClair;
+    padding: 0.5em;
+    text-align: center;
+
+    li {
+      display: inline;
+      margin-right: 2.3em;
+      margin-left: 2.3em;
+
+      &:first-child {
+        margin-right: 0em;
+      }
+
+      &:last-child {
+        margin-right: 0em;
+      }
+    }
+
+    a {
+      color: @rose;
+      font-size: 1.8em;
+      font-family: @heroLight;
+       &:hover, &:active {
+        color: #000000;
+      }
+    }
+  }
+
+
+
+#contenu {
+  margin-top:2em;
+}
+
+/*-------------PAGE D'ACCUEIL-------------*/
+#accueil #navigation li:first-child a {
+  color: #000000;
+}
+#introduction {
+  height: 40em;
+  position: relative;
+  top: 8em;
+}
+#blocIntro {
+  float: right;
+  width: 75%;
+}
+
+#texteIntro {
+  float:right;
+  width:35.3em;
+  position: relative;
+  font-family: @heroNormal;
+  color: @grisFonce;
+  font-size: 1.3em;
+  line-height: 1.4em;
+  padding: 1em;
+  border: 1px solid @rose;
+  background-color: rgba(193, 193, 193, 0.6);
+
+  p {
+    margin-bottom: 0.8em;
+  }
+
+  span {
+    color: @rose;
+  }
+
+  a {
+    color: @rose;
+
+    &:hover {
+      color: @blanc;
+    }
+  }
+}
+
+#imgLienPortfolio {
+  position: absolute;
+  right: -3em;
+  top: 6em;
+
+  &:hover {
+    right:-3.2em;
+    top:6.2em;
+  }
+}
+
+#imageIntro {
+  float: left;
+  width: 25%;
+}
+#texteOmg {
+  font-family: @leagueGothic, sans-serif;
+  color: @rose;
+  position: relative;
+  bottom: 3em;
+  left: 0.4em;
+  line-height: 1.4em;
+
+  h2 {
+  font-size: 5.8em;
+  }
+
+  h3 {
+  font-size: 4.6em;
+  position: relative;
+  bottom: -0.6em;
+  }
+}
+
+#logosWeb {
+  position: relative;
+  bottom: 7.5em;
+  left: 26em;
+  width: 30em;
+
+  li {
+    background-image: url("http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2012/10/logosAccueil.png");
+    background-size: 70px 280px;
+    background-repeat: no-repeat;
+    height: 70px;
+    width: 70px;
+    display: inline-block;
+    margin-right: 1.45em;
+    margin-left: 1.45em;
+
+    &:hover {
+      background-image: url("http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2012/10/logosAccueilHover.png");
+      background-size: 70px 280px;
+    }
+  }
+
+  .ic_twitter {
+    background-position: 0px 0px;
+    margin-right: 0;
+  }
+  .ic_facebook {
+    background-position: 0px -70px;
+  }
+  .ic_linkedin{
+    background-position: 0px -140px;
+    margin-left: 0;
+  }
+  .ic_behance {
+    background-position: 0px -210px;
+  }
+
+  a {
+    display: block;
+    height: 70px;
+    width: 70px;
+  }
+}
+
+#ficheProfil {
+  height: 33em;
+  position: relative;
+  top: 3em;
+
+  h1 {
+    font-family: @greatVibes;
+    font-size: 2.8em;
+    color: @rose;
+    border-bottom: 5px solid @rose;
+    padding-bottom: 0.3em;
+    float: left;
+    width: 15.9em;
+  }
+}
+#photoMoi {
+  float: right;
+  width: 33%;
+  position: relative;
+  bottom: 3.5em;
+}
+#details {
+  float: left;
+  width: 55%;
+  font-size: 1.2em;
+  line-height: 1.4em;
+  color: @grisFonce;
+  padding-top: 0.1em;
+  position: relative;
+  top: 2em;
+
+  p {
+    margin-bottom: 0.8em;
+    line-height: 1.4em;
+  }
+
+  span {
+  color: @rose;
+  }
+}
+
+#fiche {
+  padding-top: 1.4em;
+}
+
+#competences {
+  clear: both;
+  margin: 0 auto;
+  position: relative;
+  top: 3em;
+  height: 27em;
+
+  section {
+    float: left;
+    width: 33%;
+
+    &:nth-of-type(2) {
+      width:34%;
+      text-align: center;
+    }
+
+    &:last-child {
+      text-align: right;
+    }
+  }
+
+  h2 {
+    font-size: 2.3em;
+    font-variant: small-caps;
+    color: @rose;
+    margin-bottom: 0.6em;
+  }
+
+  li {
+    color: @grisFonce;
+    font-size: 1.7em;
+  }
+}
+
+/*-------------PAGE PORTFOLIO-------------*/
+#contenuPortfolio {
+  position: relative;
+  top: 5em;
+  height: 86em;
+
+  >header>h1 {
+    text-align: left;
+    font-family: @greatVibes;
+    font-size: 2.8em;
+    color: @rose;
+    border-bottom: 5px solid @rose;
+    padding-bottom: 0.3em;
+  }
+}
+
+#categories{
+height: 20em;
+margin: 0 auto;
+margin-top: 4em;
+}
+
+#catWeb, #catGraph {
+  height: 36em;
+}
+.introCat {
+  width: 83%;
+  margin:0 auto;
+
+ img {
+	float:left;
+}
+}
+
+.texteCat {
+  float: right;
+  width: 70%;
+  font-family: "League Gothic";
+  color: #a2185b;
+  text-transform: uppercase;
+  text-align:right;
+  position:relative;
+  top:10em;
+  line-height:1.4em;
+
+  h2 {
+    font-size:5em;
+  }
+
+  h3 {
+    font-size: 3.96em;
+    position: relative;
+    top: 0.6em;
+  }
+}
+
+#catGraph .introCat img {
+  float:right;
+}
+
+#catGraph .texteCat {
+  float:left;
+}
+
+#conteneurSlider {
+  position: relative;
+  top:3em;
+  z-index: 1;
+  clear:both;
+}
+
+#carousel {
+  float:left;
+  width:65.802em;
+  overflow:hidden;
+  position:relative;
+  top:2em;
+  height:11em;
+}
+ 
+#many {
+  position: relative;
+  left:0px;
+  width:9999px;
+
+  img {
+    margin-bottom:-4px;
+    bottom:4px;
+    border:0px;
+  }
+
+  figcaption {
+    font-size: 0.9em;
+    margin-top: 1em;
+    display:table;
+    width:130.4px;
+    background-color: rgba(193,193,193,.6);
+    color: @grisFonce;
+    border:1px solid @rose;
+    padding: 0.7em;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease-out;  
+    -moz-transition: opacity 0.3s ease-out;  
+    -ms-transition: opacity 0.3s ease-out;  
+    -o-transition: opacity 0.3s ease-out;  
+    transition: opacity 0.3s ease-out; 
+  }
+
+  li:hover figcaption {
+    opacity: 1;
+  }
+}
+
+#leftButton,#rightButton {
+  float:left;
+  width: 2.6em;
+  position: relative;
+  top: 6em;
+
+  button  {
+    height:34px;
+    width:34px;
+    border-radius: 34px;
+    background:#DAA3BD;
+    cursor: pointer;
+    border: 1px solid @rose;
+    font-family: "LeagueGothic-Regular";
+    color: @rose;
+  }
+}
+
+#leftButton {
+  margin-right: 1.5em;
+}
+
+#rightButton {
+  margin-left: 1.5em;
+}
+
+.imagesPortfolio {
+  li {
+  	display: inline-block;
+  	margin-right: 0.7em;
+  	margin-left: 0.7em;
+  } 
+
+  a {
+    position: relative;
+    display:inline-block;
+  }
+
+  img {
+    box-shadow: 0px 0px 8px @grisFonce;
+    opacity: 0.7;
+    -moz-transition: opacity 0.5s linear;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.em {
+  color: @rose;
+}
+
+/*-------------STYLE PAGE BLOG--------------*/
+
+#contenerBlog {
+  padding-top: 3em;
+}
+
+#monBlog {
+  display: table-cell;
+
+  article {
+    line-height: 1.4em;
+    padding: 1em;
+    border: 1px solid @rose;
+    background-color: rgba(193, 193, 193, 0.6);
+    margin-bottom: 2em;
+    position: relative;
+    bottom: 1em;
+    margin-bottom: 2.5em;
+  }
+}
+
+#mesArticles {
+  width: 70%;
+  float: left;
+  margin-right: 1.9em;
+
+  >header>h1 {
+    text-align: left;
+    font-family: @greatVibes;
+    font-size: 2.8em;
+    color: @rose;
+    border-bottom: 5px solid @rose;
+    padding-bottom: 0.3em;
+    margin-bottom: 1em;
+  }
+}
+
+.imageArticle {
+  float: left;
+  width: 20.5%;
+  margin-right: 1em;
+  margin-bottom: -1em;
+}
+.contenuArticle h1 {
+  color: @rose;
+  font-size: 1.6em;
+  font-variant: small-caps;
+}
+.texteArticle {
+  color: @grisFonce;
+  line-height: 1.5em;
+  font-size: 1.14em;
+  margin-bottom: 2em;
+}
+.dateArticle {
+  font-size: 1.1em;
+  color: #000000;
+  margin-bottom: 1.3em;
+}
+.articles footer {
+  clear: both;
+  text-align: center;
+  background-color: rgba(185, 102, 142, 0.6);
+  color: @rose;
+  padding: 0.2em;
+  width: 32%;
+  margin: 0 auto;
+
+  a {
+  color: @rose;
+
+    &:hover {
+    color: @blanc;
+    }
+  }
+}
+
+#tousLesArticles {
+  width: 24%;
+  float: left;
+  margin-left: 1.9em;
+
+  >header>h1 {
+    text-align: left;
+    font-family: @greatVibes;
+    font-size: 2.8em;
+    color: @rose;
+    border-bottom: 5px solid @rose;
+    padding-bottom: 0.3em;
+    margin-bottom: 1em;
+    }
+}
+
+#recherche, #newsletter {
+  width: 24%;
+  float: left;
+  margin-left: 1.9em;
+
+  h1 {
+    text-align: left;
+    font-family: @greatVibes;
+    font-size: 2.8em;
+    color: @rose;
+    border-bottom: 5px solid @rose;
+    padding-bottom: 0.3em;
+    margin-bottom: 1em;
+  }
+
+  >section {
+    padding: 2em;
+    line-height: 1.4em;
+    border: 1px solid @rose;
+    background-color: rgba(193, 193, 193, 0.6);
+    position: relative;
+    bottom: 1em;
+    margin-bottom: 2.5em;
+  }
+}
+
+#historiqueArticles {
+  padding: 2em;
+  line-height: 1.4em;
+  border: 1px solid @rose;
+  background-color: rgba(193, 193, 193, 0.6);
+  position: relative;
+  bottom: 1em;
+  margin-bottom: 2.5em;
+}
+
+.moisPublication {
+  color: @rose;
+  font-size: 1.3em;
+  font-variant: small-caps;
+}
+
+.derniersArticles {
+  ul {
+    margin: 0.3em 0 1.3em 0;
+  }
+  li {
+    list-style-image: url("img/iconeArticle.png");
+    margin-left: 1.4em;
+  }
+  a {
+    font-size: 1em;
+    color: @rose;
+    &:hover {
+      color: @blanc;
+    }
+  }
+}
+
+.recapArticles section {
+
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.commentSpace h2, #reply-title {
+  color: @rose;
+  font-variant: small-caps;
+  font-size: 1.4em;
+}
+
+.commentaire {
+  width: 28em;
+  padding: 2em;
+  margin: 0 auto;
+  background-color: @grisClair;
+  margin-top: 2em;
+  font-size: 1em;
+  border: 1px solid @grisFonce;
+}
+
+#commentform {
+  margin: 0 auto;
+  color: @rose;
+
+  label {
+  display: block;
+  }
+
+  input{
+    margin-bottom: 1em;
+    background-color: rgba(231, 231, 231, 0.6);
+    height: 1.4em;
+    width: 12em;
+    border: 0.5px solid @grisFonce;
+    padding-left: 0.2em;
+    font-family: @heroNormal;
+    color: @grisFonce;
+
+    &:hover {
+      border: 0.5px solid @rose;
+      background-color: #e7e7e7;
+    }
+  }
+
+  textarea  {
+    background-color: rgba(231, 231, 231, 0.6);
+    width: 22.5em;
+    height:7em;
+    border: 0.5px solid @grisFonce;
+    padding-left: 0.2em;
+    font-family: @heroNormal;
+    color: @grisFonce;
+
+    &:hover {
+      border: 0.5px solid @rose;
+      background-color: #e7e7e7;
+    }
+  }
+}
+
+#respond {
+	width: 28em;
+	padding: 2em;
+	margin: 0 auto;
+	background-color: @grisClair;
+	margin-top: 2em;
+	font-size: 1em;
+	border: 1px solid @grisFonce;
+}
+
+#submit {
+	margin-top: 1em;
+	margin-bottom: 0em;
+  background: #ddd;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#c4c4c4));
+  background: -moz-linear-gradient(top, #ededed, #c4c4c4);
+  color: @rose;
+  border-radius: 3px;
+  border: 0.5px solid @rose;
+  font-size: 1em;
+  cursor: pointer;
+  font-family: @heroLight;
+  width: 9em;
+
+  &:hover {
+    text-shadow: 0px 1px 0px @blanc;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
+  }
+}
+
+.comment-notes {
+	margin-bottom: 1.4em;
+	color: @grisFonce;
+}
+
+.comment-form-author, .comment-form-email, .comment-form-url {
+	width: 14em;
+	float: left;
+}
+
+.comment-form-comment {
+	  float: left;
+	    width: 26em;
+}
+
+.form-allowed-tags {
+	clear: both;
+}
+
+/*-------------PAGE SINGLE-POST---------*/
+
+#monArticle header {
+position: relative;
+top: 3em;
+}
+
+/*-------------PAGE CONTACT-------------*/
+#contenuContact {
+  height: 48em;
+  position: relative;
+  top: 5em;
+}
+#formContact {
+  float: left;
+  width: 40%;
+
+  h1 {
+    font-family: @greatVibes;
+    font-size: 2.8em;
+    color: @rose;
+    border-bottom: 5px solid @rose;
+    padding-bottom: 0.3em;
+  }
+}
+
+#form {
+  padding: 2em;
+  //font-family: "Hero";
+  line-height: 1.4em;
+  border: 1px solid @rose;
+  background-color: rgba(193, 193, 193, 0.6);
+  margin-top: 3em;
+  height: 27.5em;
+}
+
+#contact {
+  float: left;
+  width: 50%;
+  font-size: 1.4em;
+  //font-family: "Hero";
+  color: @grisFonce;
+}
+#formulaire {
+  float: left;
+  max-width: 13.5em;
+  color: @rose;
+  font-size: 1.3em;
+  font-variant: small-caps;
+
+  label {
+    display: block;
+  }
+
+  textarea {
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 17.5em;
+    height: 12em;
+    border: 0.5px solid @grisFonce;
+    padding-left: 0.2em;
+    font-family: @heroNormal;
+    color: @grisFonce;
+
+    &:hover {
+      border: 0.5px solid @rose;
+      background-color: @blanc;
+    }
+  }
+}
+
+/*--------FORMULAIRES--------*/
+
+#formulaire input,
+#recherche form input:first-child,
+#newsletter form input:first-child {
+  margin-bottom: 1.5em;
+  background-color: rgba(255, 255, 255, 0.8);
+  height: 1.5em;
+  width: 12em;
+  border: 0.5px solid @grisFonce;
+  padding-left: 0.2em;
+  font-family: @heroNormal;
+  color: @grisFonce;
+
+  &:hover, &:focus {
+    border: 0.5px solid @rose;
+    background-color: @blanc;
+  }
+}
+
+#recherche form input:first-child,
+#newsletter form input:first-child {
+  margin-bottom: 0;
+}
+
+#formulaire #envoyer,
+#recherche form input:last-child,
+#newsletter form input:last-child {
+  margin-top: 1em;
+  background: #ddd;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#c4c4c4));
+  background: -moz-linear-gradient(top, #ededed, #c4c4c4);
+  color: @rose;
+  border-radius: 3px;
+  border: 0.5px solid @rose;
+  font-size: 1em;
+  cursor: pointer;
+  font-family: @heroLight;
+
+  &:hover {
+  text-shadow: 0px 1px 0px @blanc;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
+  }
+}
+
+#formulaire #envoyer {
+  width: 5em;
+}
+
+#imgContact {
+  float: right;
+  width: 40%;
+  position: relative;
+  top: 10em;
+}
+
+/*-------------FOOTER-------------*/
+#footerSite {
+  width: 100%;
+  background-image: url("img/motifFooter2.png");
+  background-repeat: repeat-x;
+  height:21em;
+  clear: both;
+
+  p {
+  color: @rose;
+  position: relative;
+  top: 8.8em;
+  text-align: right;
+  font-size: 1.2em;
+  float: right;
+  text-shadow:none;
+  }
+}
+
+#adresse {
+  float: left;
+  width: 34.5%;
+  padding-top: 2em;
+  line-height: 1.6em;
+
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.2em;
+  } 
+
+  li {
+    font-size: 1.6em;
+    margin-bottom: 0.2em;
+
+    &:nth-of-type(2), &:nth-of-type(3) {
+      display: inline-block;
+     }
+  }
+}
+
+#lienProfil {
+  font-size: 1.4em;
+  text-decoration: none;
+  font-variant: small-caps;
+  margin-top: 1em;
+}
+
+#coord {
+  position: relative;
+  top: 1em;
+  font-size: 0.9em;
+
+  li {
+    padding-left: 2.3em;
+    background-image: url("http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2012/11/iconesCoord.png");
+    background-repeat: no-repeat;
+    height: 26px;
+
+    &:first-child {
+      background-position: 0px -25px;
+    }
+
+    &:nth-of-type(2) {
+      background-position: 0px 0px;
+    }
+  }
+}
+
+#recapMenu {
+  float: left;
+  width: 34.5%;
+  padding-top: 2em;
+  li {
+    margin-bottom: 0.8em;
+
+    a {
+      font-size: 2.5em;
+      font-variant: small-caps;
+     }
+  }
+}
+
+
+#liensInternet {
+  float: left;
+  width: 31%;
+  padding-top: 2em;
+
+  li {
+    display: inline-block;
+    margin-right: 0.8em;
+    margin-left: 0.8em;
+    background-image: url("http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2012/11/iconesFooter.png");
+    background-size: 60px 240px;
+    background-repeat: no-repeat;
+    height: 60px;
+    width: 60px;
+
+    &:hover {
+      background-image: url("http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2012/11/iconesFooterHover.png");
+      background-size: 60px 240px;
+    }
+
+    a {
+      display: block;
+      height: 60px;
+      width: 60px;
+    }
+  }
+
+
+  .ic_facebook { 
+    background-position: 0px 0px;
+  }
+
+  .ic_twitter {
+    background-position: 0px -60px;
+    margin-right: 0;
+  }
+
+  .ic_linkedin {
+    background-position: 0px -120px;
+    margin-left: 0;
+  }
+
+  .ic_behance {
+    background-position: 0px -180px;
+  }
+}
+
+#footerContenu {
+  clear: both;
+  position: relative;
+  padding-top: 2em;
+  color: @blanc;
+  font-family: @heroLight;
+  text-shadow:1px 1px 2px #4F4F4F;
+
+  a {
+    color: @blanc;
+
+    &:hover {
+      color: @rose;
+    }
+  }
+}
+
+/*-----------------MEDIAQUERIES_IPAD_portrait------*/
+
+@media screen and (min-width: 768px) and (max-width: 800px) {
+  #banner {
+    min-width: 37em;
+  }
+  #logo {
+    position: relative;
+    left: 15em;
+  }
+  #banner h2 {
+    display: none;
+  }
+  #introduction {
+    height: 26em;
+    top: 3em;
+  }
+#imgLienPortfolio {
+  display:none;
+}
+
+  #imageIntro,
+  #texteOmg {
+    display: none;
+  }
+  #logosWeb {
+    bottom: 0em;
+    left: -2em;
+  }
+  #blocIntro h1 {
+    text-align: left;
+  }
+  #texteIntro {
+    bottom: -3.5em;
+    left: -9em;
+  }
+  #ficheProfil {
+    min-width: 37em;
+    margin-left: 2em;
+  }
+  #photoMoi {
+    right: 6em;
+  }
+  #ficheProfil h1 {
+    width: 10em;
+  }
+  #details {
+    width: 52%;
+  }
+  #blocCompetences {
+    padding: 0 2em 0 2em;
+    min-width: 49em;
+  }
+  #competences {
+    min-width: 49em;
+  }
+  #competences section {
+    width: 28%;
+    margin: 0em;
+  }
+  #competences section:nth-of-type(2) {
+    width: 44%;
+  }
+  #competences h2 {
+    font-size: 1.6em;
+  }
+  #competences li {
+    font-size: 1.2em;
+  }
+  #footerContenu {
+    min-width: 53em;
+    height: 18em;
+  }
+  #footerSite #adresse {
+    font-size: 0.8em;
+    position: relative;
+    left: 2em;
+  }
+  #footerSite #imgFooter {
+    display: none;
+  }
+  #footerSite #liensInternet {
+    width: 44%;
+  }
+  #footerSite #recapMenu {
+    position: relative;
+    left: 8em;
+    font-size: 0.89em;
+  }
+  #footerSite #liensInternet h2 {
+    display: none;
+  }
+  #footerSite #adresse #coord {
+    top: 1em;
+  }
+  #liensInternet ul {
+    text-align: right;
+  }
+  #footerSite p {
+    width: 33%;
+    right: 1.8em;
+    top: 8.8em;
+  }
+  #monBlog {
+    min-width: 37em;
+  }
+  #mesArticles {
+    width: 63%;
+    margin-right: 0.5em;
+    margin-left: 1.9em;
+  }
+}
+
+
+/*-----------------MEDIAQUERIES_MOBILE_portrait------*/
+
+@media screen and (min-width: 100px) and (max-width: 599px) {
+  
+  #banner h2 {
+    display: none;
+  }
+}

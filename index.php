@@ -5,7 +5,7 @@ if(have_posts):
 while(have_posts()):
         the_post();
         ?>
-            <section id="introduction">
+            <section id="introduction" class="section">
 			<?php the_content();
 			
 			endwhile;
@@ -60,7 +60,7 @@ while(have_posts()):
 					</section>
 			</section>
 				
-			<section id="ficheProfil">
+			<section id="ficheProfil" class="section">
 <h1>À propos de moi</h1>
 <section id="fiche"><section id="details">
 	<p>Je m'apelle <span>Mélanie</span>, j'ai 21 ans et j'habite en Province de <span>Liège</span>.</p> 
@@ -74,7 +74,7 @@ et je fais du sport deux fois par semaine.</p>
 </section>
 </section>
 
-				<section id="blocCompetences">
+				<section id="blocCompetences" class="section">
 					<section id="competences">
 						<section id="graphisme">
 							<h2>graphisme / design</h2>
