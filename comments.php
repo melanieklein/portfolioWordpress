@@ -1,6 +1,4 @@
-<h2><?php _e('commentaires'); ?></h2>
-
-<?php
+<?php remove_filter('the_comment','comment');
     if(have_comments()):
         while(have_comments()):
             the_comment();

@@ -1,40 +1,43 @@
 <?php remove_filter('the_content','wpautop');
-get_header();
+get_header(); ?>
 
-			?>
-		<section id="monArticle">
-
-		<header>
-				<a href="http://ptfmela.dreamdesgn.com/wordpress/blog.php">Retour à tous les articles</a>
-		</header>
+		<div id="monArticle" class="section">
+			<header class="retourArticles">
+				<a href="http://ptfmela.dreamdesgn.com/wordpress/blog">Retour à tous les articles</a>
+			</header>
 		
-		<?php			
-			 if(have_posts):
-        while(have_posts()):
-        the_post(); ?>
+			<?php			
+			if(have_posts):
+        	while(have_posts()):
+        	the_post(); ?>
 		
-		<article class="articles">
-
-                    <section class="imageArticle">
-						<?php the_post_thumbnail('thumbnail');?>
-                    </section>
-                        <section class="contenuArticle">
-                            <h1><?php the_title();?></h1>
-                            <p class="dateArticle"><?php _e('Publié le')?> <?php echo(get_the_date());?></p>
-                            <p class="texteArticle"><?php the_content();?></p>
-                        </section>
-                    <footer>
-					 <?php get_comments_number();?>
-					<p><a href="#" class="boutonCommenter">Commenter</a> | <a href="#"><?php comments_number('0 commentaires','1 commentaire', '% commentaires');?></a></p> 
-					</footer>
-				<section class="commentSpace">
+			<article class="article">
+				<h1 class="outliner"><?php the_title();?></h1>
+                <div>
+	                <div class="imageArticle">
+						<?php the_post_thumbnail('medium');?>
+	                </div>
+	                <div class="contenuArticle">
+	                    <em><?php the_title();?></em>
+	                    <p class="dateArticle"><?php _e('Publié le')?> <?php echo(get_the_date());?></p>
+	                    <p class="texteArticle"><?php the_content();?></p>
+	                </div>
+	            </div>
+                <footer>
+                	<?php get_comments_number();?>
+                	<p><?php comments_number('0 commentaires','1 commentaire', '% commentaires');?></p>					
+				</footer>
+				<div class="commentSpace">
 				<?php comments_template();?>
-				</section>
-				
-		</article> 
+				</div>	
+			</article> 
+
 			<?php endwhile;
 			endif;
 			?>
-			</section>
-<?php			
-get_footer();
+
+			<footer class="retourArticles" >
+				<a href="http://ptfmela.dreamdesgn.com/wordpress/blog">Retour à tous les articles</a>
+			</footer>
+		</div>
+		<?php get_footer();

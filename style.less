@@ -64,12 +64,16 @@ a {
   margin: 0 auto;
 }
 
+.outliner {
+  display:none;
+}
+
 /*------------HEADER-----------*/
 #banner {
   height: 10em;
   position: relative;
 
-  h2 {
+  p {
     font-family: @greatVibes;
     float: right;
     font-size: 3em;
@@ -98,7 +102,7 @@ a {
       margin-left: 2.3em;
 
       &:first-child {
-        margin-right: 0em;
+        margin-left: 0em;
       }
 
       &:last-child {
@@ -115,8 +119,6 @@ a {
       }
     }
   }
-
-
 
 #contenu {
   margin-top:2em;
@@ -188,11 +190,11 @@ a {
   left: 0.4em;
   line-height: 1.4em;
 
-  h2 {
+  p:first-child {
   font-size: 5.8em;
   }
 
-  h3 {
+  p:last-child {
   font-size: 4.6em;
   position: relative;
   bottom: -0.6em;
@@ -295,6 +297,11 @@ a {
   top: 3em;
   height: 27em;
 
+  div {
+    float: left;
+    width: 33%;
+  }
+
   section {
     float: left;
     width: 33%;
@@ -311,7 +318,7 @@ a {
 
   h2 {
     font-size: 2.3em;
-    font-variant: small-caps;
+    text-transform: uppercase;
     color: @rose;
     margin-bottom: 0.6em;
   }
@@ -367,11 +374,11 @@ margin-top: 4em;
   top:10em;
   line-height:1.4em;
 
-  h2 {
+  p:first-child {
     font-size:5em;
   }
 
-  h3 {
+  p:last-child {
     font-size: 3.96em;
     position: relative;
     top: 0.6em;
@@ -384,6 +391,11 @@ margin-top: 4em;
 
 #catGraph .texteCat {
   float:left;
+  top: 9em;
+}
+
+#catGraph .texteCat h3{
+  font-size: 4.65em;
 }
 
 #conteneurSlider {
@@ -527,14 +539,24 @@ margin-top: 4em;
 
 .imageArticle {
   float: left;
-  width: 20.5%;
+  width: auto;
   margin-right: 1em;
   margin-bottom: -1em;
 }
-.contenuArticle h1 {
-  color: @rose;
-  font-size: 1.6em;
-  font-variant: small-caps;
+.contenuArticle {
+
+  a {
+    color: @rose;
+    &:hover {
+        color: #000000;
+    }
+  }
+  
+  em {
+    color: @rose;
+    font-size: 1.6em;
+    text-transform: uppercase;
+  }
 }
 .texteArticle {
   color: @grisFonce;
@@ -570,7 +592,7 @@ margin-top: 4em;
   float: left;
   margin-left: 1.9em;
 
-  >header>h1 {
+  >h1 {
     text-align: left;
     font-family: @greatVibes;
     font-size: 2.8em;
@@ -596,7 +618,7 @@ margin-top: 4em;
     margin-bottom: 1em;
   }
 
-  >section {
+  >div {
     padding: 2em;
     line-height: 1.4em;
     border: 1px solid @rose;
@@ -620,7 +642,7 @@ margin-top: 4em;
 .moisPublication {
   color: @rose;
   font-size: 1.3em;
-  font-variant: small-caps;
+  text-transform: uppercase;
 }
 
 .derniersArticles {
@@ -650,20 +672,30 @@ margin-top: 4em;
   }
 }
 
-.commentSpace h2, #reply-title {
-  color: @rose;
-  font-variant: small-caps;
-  font-size: 1.4em;
+/*------------FORM_COMMENTAIRES---------*/
+.commentSpace {
+padding-bottom: 3em;
+
+  h2 {
+    color: @rose;
+    font-size: 1.2em;
+  }
 }
 
 .commentaire {
-  width: 28em;
-  padding: 2em;
-  margin: 0 auto;
-  background-color: @grisClair;
-  margin-top: 2em;
+  margin-top: 0.5em;
   font-size: 1em;
-  border: 1px solid @grisFonce;
+  padding-left: 1.5em;
+
+  h3 {
+    color: #000000;
+  }
+}
+
+#reply-title {
+  color: @rose;
+  text-transform: uppercase;
+  font-size: 1.25em;
 }
 
 #commentform {
@@ -690,10 +722,10 @@ margin-top: 4em;
     }
   }
 
-  textarea  {
-    background-color: rgba(231, 231, 231, 0.6);
-    width: 22.5em;
-    height:7em;
+  textarea {
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 33.5em;
+    height: 9em;
     border: 0.5px solid @grisFonce;
     padding-left: 0.2em;
     font-family: @heroNormal;
@@ -701,40 +733,46 @@ margin-top: 4em;
 
     &:hover {
       border: 0.5px solid @rose;
-      background-color: #e7e7e7;
+      background-color: @blanc;
+    }
+  }
+
+  #submit {
+    margin-top: 1em;
+    margin-bottom: 0em;
+    background: #ddd;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#c4c4c4));
+    background: -moz-linear-gradient(top, #ededed, #c4c4c4);
+    color: @rose;
+    border-radius: 3px;
+    border: 0.5px solid @rose;
+    font-size: 1.1em;
+    cursor: pointer;
+    font-family: @heroLight;
+    width: 9em;
+
+    &:hover {
+      text-shadow: 0px 1px 0px @blanc;
+      box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
+      -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
+      -moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
     }
   }
 }
 
 #respond {
-	width: 28em;
-	padding: 2em;
-	margin: 0 auto;
-	background-color: @grisClair;
 	margin-top: 2em;
 	font-size: 1em;
-	border: 1px solid @grisFonce;
 }
 
-#submit {
-	margin-top: 1em;
-	margin-bottom: 0em;
-  background: #ddd;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#c4c4c4));
-  background: -moz-linear-gradient(top, #ededed, #c4c4c4);
-  color: @rose;
-  border-radius: 3px;
-  border: 0.5px solid @rose;
-  font-size: 1em;
-  cursor: pointer;
-  font-family: @heroLight;
-  width: 9em;
-
-  &:hover {
-    text-shadow: 0px 1px 0px @blanc;
-    box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
-    -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
+.logged-in-as {
+  color: @grisFonce;
+  font-size: 1.1em;
+  a {
+    color: @rose;
+    &:hover {
+      color: @blanc;
+    }
   }
 }
 
@@ -749,19 +787,72 @@ margin-top: 4em;
 }
 
 .comment-form-comment {
-	  float: left;
-	    width: 26em;
+	float: left;
+	width: 26em;
+  color: @grisFonce;
 }
 
 .form-allowed-tags {
 	clear: both;
+  width: 33.5em;
+  font-size: 0.9em;
+  line-height: 1.2em;
+  color: @grisFonce;
+  font-family: @heroLight;
 }
 
 /*-------------PAGE SINGLE-POST---------*/
 
-#monArticle header {
-position: relative;
-top: 3em;
+.retourArticles {
+  margin-bottom: 1em;
+  font-size: 1.5em;
+
+  a {
+    color: @rose;
+
+    &:hover {
+      color: #000000; 
+    }
+  }
+}
+
+#monArticle {
+  margin-top: 2em;  
+  
+  .imageArticle {
+    width:auto;
+  }
+}
+
+.article{
+    line-height: 1.4em;
+    padding: 1em;
+    border: 1px solid @rose;
+    background-color: rgba(193, 193, 193, 0.6);
+    position: relative;
+    bottom: 1em;
+
+    >div {
+      display: table;
+    }
+
+    footer {
+      clear:both;
+      margin-top: 1em;
+
+      p {
+        color: @rose;
+        font-size:1.25em;
+        text-transform: uppercase;
+      }
+    }
+}
+
+#nbreComm {
+  color: @rose;
+  &:hover {
+    color: @blanc;
+  }
 }
 
 /*-------------PAGE CONTACT-------------*/
@@ -805,7 +896,7 @@ top: 3em;
   max-width: 13.5em;
   color: @rose;
   font-size: 1.3em;
-  font-variant: small-caps;
+  text-transform: uppercase;
 
   label {
     display: block;
@@ -893,7 +984,7 @@ top: 3em;
   height:21em;
   clear: both;
 
-  p {
+  p:last-child {
   color: @rose;
   position: relative;
   top: 8.8em;
@@ -910,7 +1001,7 @@ top: 3em;
   padding-top: 2em;
   line-height: 1.6em;
 
-  h1 {
+  p {
     font-size: 2.5em;
     margin-bottom: 0.2em;
   } 
@@ -928,7 +1019,7 @@ top: 3em;
 #lienProfil {
   font-size: 1.4em;
   text-decoration: none;
-  font-variant: small-caps;
+  text-transform: uppercase;
   margin-top: 1em;
 }
 
@@ -962,7 +1053,7 @@ top: 3em;
 
     a {
       font-size: 2.5em;
-      font-variant: small-caps;
+      text-transform: uppercase;
      }
   }
 }
@@ -1032,120 +1123,159 @@ top: 3em;
   }
 }
 
-/*-----------------MEDIAQUERIES_IPAD_portrait------*/
+/*-----------------MEDIAQUERIES_IPAD_paysage------*/
 
-@media screen and (min-width: 768px) and (max-width: 800px) {
-  #banner {
-    min-width: 37em;
-  }
-  #logo {
-    position: relative;
-    left: 15em;
-  }
-  #banner h2 {
-    display: none;
-  }
-  #introduction {
-    height: 26em;
-    top: 3em;
-  }
-#imgLienPortfolio {
-  display:none;
+@media only screen and (max-width: 1024px) {
+
+.section {
+  min-width: 43em;
+  max-width: 51em;
 }
 
-  #imageIntro,
-  #texteOmg {
+#banner p, #imageIntro, #texteOmg, #imgLienPortfolio {
     display: none;
+}
+
+#logo {
+  position: relative;
+  left: 12.5em;
+}
+  
+#introduction {
+  height: 26em;
+  top: 3em;
+}
+
+#logosWeb {
+  bottom: 0em;
+  left: -2em;
+}
+
+#blocIntro h1 {
+  text-align: left;
+}
+
+#texteIntro {
+  width: 37.1em;
+  bottom: -3.5em;
+}
+
+#photoMoi {
+  right: 6em;
+}
+
+#ficheProfil h1 {
+  width: 11em;
+  font-size: 2.32em;
+}
+
+#details {
+  width: 52%;
+}
+
+#competences section {
+  width: 28%;
+}
+  
+#competences div {
+  width: 38%;
+}
+  
+#competences h2 {
+  font-size: 1.39em;
+}
+  
+#competences li {
+  font-size: 1.4em;
+}
+  
+#footerContenu {
+  height: 18em;
+}
+
+#footerSite #adresse {
+  font-size: 0.8em;
+}
+
+#footerSite #imgFooter {
+  display: none;
+}
+
+#recapMenu {
+  width: 34%;
+}
+#footerSite #liensInternet {
+  width: 31%;
+}
+
+#liensInternet li {
+  background-size: 40px 160px;
+  height: 40px;
+  width: 40px;
+  margin: 0 0.5em 0 0.5em;
+  &:hover {
+    background-size: 40px 160px;
   }
-  #logosWeb {
-    bottom: 0em;
-    left: -2em;
-  }
-  #blocIntro h1 {
-    text-align: left;
-  }
-  #texteIntro {
-    bottom: -3.5em;
-    left: -9em;
-  }
-  #ficheProfil {
-    min-width: 37em;
-    margin-left: 2em;
-  }
-  #photoMoi {
-    right: 6em;
-  }
-  #ficheProfil h1 {
-    width: 10em;
-  }
-  #details {
-    width: 52%;
-  }
-  #blocCompetences {
-    padding: 0 2em 0 2em;
-    min-width: 49em;
-  }
-  #competences {
-    min-width: 49em;
-  }
-  #competences section {
-    width: 28%;
-    margin: 0em;
-  }
-  #competences section:nth-of-type(2) {
-    width: 44%;
-  }
-  #competences h2 {
-    font-size: 1.6em;
-  }
-  #competences li {
-    font-size: 1.2em;
-  }
-  #footerContenu {
-    min-width: 53em;
-    height: 18em;
-  }
-  #footerSite #adresse {
-    font-size: 0.8em;
-    position: relative;
-    left: 2em;
-  }
-  #footerSite #imgFooter {
-    display: none;
-  }
-  #footerSite #liensInternet {
-    width: 44%;
-  }
-  #footerSite #recapMenu {
-    position: relative;
-    left: 8em;
-    font-size: 0.89em;
-  }
-  #footerSite #liensInternet h2 {
-    display: none;
-  }
-  #footerSite #adresse #coord {
-    top: 1em;
-  }
-  #liensInternet ul {
-    text-align: right;
-  }
-  #footerSite p {
-    width: 33%;
-    right: 1.8em;
-    top: 8.8em;
-  }
-  #monBlog {
-    min-width: 37em;
-  }
-  #mesArticles {
-    width: 63%;
-    margin-right: 0.5em;
-    margin-left: 1.9em;
+}
+#liensInternet .ic_linkedin {
+background-position: 0px -80px;
+}
+
+#liensInternet .ic_behance {
+background-position: 0px -120px;
+}
+
+#liensInternet .ic_twitter {
+background-position: 0px -40px;
+}
+
+#footerSite #recapMenu {
+  font-size: 0.89em;
+}
+#footerSite #adresse #coord {
+  top: 1em;
+}
+#liensInternet ul {
+  text-align: right;
+}
+#footerSite p:last-child {
+  width: 35%;
+  top: 4.8em;
+}
+
+#mesArticles {
+  width: 65%;
+  margin-right:1.25em;
+
+  >header>h1 {
+    font-size:2.32em;
   }
 }
 
+#recherche, #newsletter, #tousLesArticles {
+  width: 30%;
+  margin-left: 1.25em;
 
+  >h1 {
+    font-size: 2.32em;
+  }
+}
+
+#formContact {
+  width:25em;
+}
+
+#formulaire input, #formulaire textarea {
+  width:21.5em;
+}
+
+}
+
+/*-----------------MEDIAQUERIES_Mobile_paysage------*/
+@media screen and (max-width: 767px){
+
+
+}
 /*-----------------MEDIAQUERIES_MOBILE_portrait------*/
 
 @media screen and (min-width: 100px) and (max-width: 599px) {

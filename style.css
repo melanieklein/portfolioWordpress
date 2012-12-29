@@ -46,19 +46,22 @@ a {
   min-width: 64em;
   margin: 0 auto;
 }
+.outliner {
+  display: none;
+}
 /*------------HEADER-----------*/
 #banner {
   height: 10em;
   position: relative;
 }
-#banner h2 {
+#banner p {
   font-family: "Great Vibes Regular";
   float: right;
   font-size: 3em;
   color: #555555;
   margin-top: 1.1em;
 }
-#banner h2 a {
+#banner p a {
   color: #a2185b;
 }
 #menu {
@@ -78,7 +81,7 @@ a {
   margin-left: 2.3em;
 }
 #navigation li:first-child {
-  margin-right: 0em;
+  margin-left: 0em;
 }
 #navigation li:last-child {
   margin-right: 0em;
@@ -153,10 +156,10 @@ a {
   left: 0.4em;
   line-height: 1.4em;
 }
-#texteOmg h2 {
+#texteOmg p:first-child {
   font-size: 5.8em;
 }
-#texteOmg h3 {
+#texteOmg p:last-child {
   font-size: 4.6em;
   position: relative;
   bottom: -0.6em;
@@ -247,6 +250,10 @@ a {
   top: 3em;
   height: 27em;
 }
+#competences div {
+  float: left;
+  width: 33%;
+}
 #competences section {
   float: left;
   width: 33%;
@@ -260,7 +267,7 @@ a {
 }
 #competences h2 {
   font-size: 2.3em;
-  font-variant: small-caps;
+  text-transform: uppercase;
   color: #a2185b;
   margin-bottom: 0.6em;
 }
@@ -309,10 +316,10 @@ a {
   top: 10em;
   line-height: 1.4em;
 }
-.texteCat h2 {
+.texteCat p:first-child {
   font-size: 5em;
 }
-.texteCat h3 {
+.texteCat p:last-child {
   font-size: 3.96em;
   position: relative;
   top: 0.6em;
@@ -322,6 +329,10 @@ a {
 }
 #catGraph .texteCat {
   float: left;
+  top: 9em;
+}
+#catGraph .texteCat h3 {
+  font-size: 4.65em;
 }
 #conteneurSlider {
   position: relative;
@@ -443,14 +454,20 @@ a {
 }
 .imageArticle {
   float: left;
-  width: 20.5%;
+  width: auto;
   margin-right: 1em;
   margin-bottom: -1em;
 }
-.contenuArticle h1 {
+.contenuArticle a {
+  color: #a2185b;
+}
+.contenuArticle a:hover {
+  color: #000000;
+}
+.contenuArticle em {
   color: #a2185b;
   font-size: 1.6em;
-  font-variant: small-caps;
+  text-transform: uppercase;
 }
 .texteArticle {
   color: #555555;
@@ -483,7 +500,7 @@ a {
   float: left;
   margin-left: 1.9em;
 }
-#tousLesArticles > header > h1 {
+#tousLesArticles > h1 {
   text-align: left;
   font-family: "Great Vibes Regular";
   font-size: 2.8em;
@@ -508,8 +525,8 @@ a {
   padding-bottom: 0.3em;
   margin-bottom: 1em;
 }
-#recherche > section,
-#newsletter > section {
+#recherche > div,
+#newsletter > div {
   padding: 2em;
   line-height: 1.4em;
   border: 1px solid #a2185b;
@@ -530,7 +547,7 @@ a {
 .moisPublication {
   color: #a2185b;
   font-size: 1.3em;
-  font-variant: small-caps;
+  text-transform: uppercase;
 }
 .derniersArticles ul {
   margin: 0.3em 0 1.3em 0;
@@ -552,20 +569,26 @@ a {
 .recapArticles section:last-child {
   border-bottom: none;
 }
-.commentSpace h2,
-#reply-title {
+/*------------FORM_COMMENTAIRES---------*/
+.commentSpace {
+  padding-bottom: 3em;
+}
+.commentSpace h2 {
   color: #a2185b;
-  font-variant: small-caps;
-  font-size: 1.4em;
+  font-size: 1.2em;
 }
 .commentaire {
-  width: 28em;
-  padding: 2em;
-  margin: 0 auto;
-  background-color: #c1c1c1;
-  margin-top: 2em;
+  margin-top: 0.5em;
   font-size: 1em;
-  border: 1px solid #555555;
+  padding-left: 1.5em;
+}
+.commentaire h3 {
+  color: #000000;
+}
+#reply-title {
+  color: #a2185b;
+  text-transform: uppercase;
+  font-size: 1.25em;
 }
 #commentform {
   margin: 0 auto;
@@ -589,9 +612,9 @@ a {
   background-color: #e7e7e7;
 }
 #commentform textarea {
-  background-color: rgba(231, 231, 231, 0.6);
-  width: 22.5em;
-  height: 7em;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 33.5em;
+  height: 9em;
   border: 0.5px solid #555555;
   padding-left: 0.2em;
   font-family: "Hero Normal", Arial, sans-serif;
@@ -599,18 +622,9 @@ a {
 }
 #commentform textarea:hover {
   border: 0.5px solid #a2185b;
-  background-color: #e7e7e7;
+  background-color: #ffffff;
 }
-#respond {
-  width: 28em;
-  padding: 2em;
-  margin: 0 auto;
-  background-color: #c1c1c1;
-  margin-top: 2em;
-  font-size: 1em;
-  border: 1px solid #555555;
-}
-#submit {
+#commentform #submit {
   margin-top: 1em;
   margin-bottom: 0em;
   background: #ddd;
@@ -619,16 +633,30 @@ a {
   color: #a2185b;
   border-radius: 3px;
   border: 0.5px solid #a2185b;
-  font-size: 1em;
+  font-size: 1.1em;
   cursor: pointer;
   font-family: "Hero Light";
   width: 9em;
 }
-#submit:hover {
+#commentform #submit:hover {
   text-shadow: 0px 1px 0px #ffffff;
   box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
+}
+#respond {
+  margin-top: 2em;
+  font-size: 1em;
+}
+.logged-in-as {
+  color: #555555;
+  font-size: 1.1em;
+}
+.logged-in-as a {
+  color: #a2185b;
+}
+.logged-in-as a:hover {
+  color: #ffffff;
 }
 .comment-notes {
   margin-bottom: 1.4em;
@@ -643,14 +671,58 @@ a {
 .comment-form-comment {
   float: left;
   width: 26em;
+  color: #555555;
 }
 .form-allowed-tags {
   clear: both;
+  width: 33.5em;
+  font-size: 0.9em;
+  line-height: 1.2em;
+  color: #555555;
+  font-family: "Hero Light";
 }
 /*-------------PAGE SINGLE-POST---------*/
-#monArticle header {
+.retourArticles {
+  margin-bottom: 1em;
+  font-size: 1.5em;
+}
+.retourArticles a {
+  color: #a2185b;
+}
+.retourArticles a:hover {
+  color: #000000;
+}
+#monArticle {
+  margin-top: 2em;
+}
+#monArticle .imageArticle {
+  width: auto;
+}
+.article {
+  line-height: 1.4em;
+  padding: 1em;
+  border: 1px solid #a2185b;
+  background-color: rgba(193, 193, 193, 0.6);
   position: relative;
-  top: 3em;
+  bottom: 1em;
+}
+.article > div {
+  display: table;
+}
+.article footer {
+  clear: both;
+  margin-top: 1em;
+}
+.article footer p {
+  color: #a2185b;
+  font-size: 1.25em;
+  text-transform: uppercase;
+}
+#nbreComm {
+  color: #a2185b;
+}
+#nbreComm:hover {
+  color: #ffffff;
 }
 /*-------------PAGE CONTACT-------------*/
 #contenuContact {
@@ -688,7 +760,7 @@ a {
   max-width: 13.5em;
   color: #a2185b;
   font-size: 1.3em;
-  font-variant: small-caps;
+  text-transform: uppercase;
 }
 #formulaire label {
   display: block;
@@ -771,7 +843,7 @@ a {
   height: 21em;
   clear: both;
 }
-#footerSite p {
+#footerSite p:last-child {
   color: #a2185b;
   position: relative;
   top: 8.8em;
@@ -786,7 +858,7 @@ a {
   padding-top: 2em;
   line-height: 1.6em;
 }
-#adresse h1 {
+#adresse p {
   font-size: 2.5em;
   margin-bottom: 0.2em;
 }
@@ -801,7 +873,7 @@ a {
 #lienProfil {
   font-size: 1.4em;
   text-decoration: none;
-  font-variant: small-caps;
+  text-transform: uppercase;
   margin-top: 1em;
 }
 #coord {
@@ -831,7 +903,7 @@ a {
 }
 #recapMenu li a {
   font-size: 2.5em;
-  font-variant: small-caps;
+  text-transform: uppercase;
 }
 #liensInternet {
   float: left;
@@ -885,28 +957,25 @@ a {
 #footerContenu a:hover {
   color: #a2185b;
 }
-/*-----------------MEDIAQUERIES_IPAD_portrait------*/
-@media screen and (min-width: 768px) and (max-width: 800px) {
-  #banner {
-    min-width: 37em;
+/*-----------------MEDIAQUERIES_IPAD_paysage------*/
+@media only screen and (max-width: 1024px) {
+  .section {
+    min-width: 43em;
+    max-width: 51em;
+  }
+  #banner p,
+  #imageIntro,
+  #texteOmg,
+  #imgLienPortfolio {
+    display: none;
   }
   #logo {
     position: relative;
-    left: 15em;
-  }
-  #banner h2 {
-    display: none;
+    left: 12.5em;
   }
   #introduction {
     height: 26em;
     top: 3em;
-  }
-  #imgLienPortfolio {
-    display: none;
-  }
-  #imageIntro,
-  #texteOmg {
-    display: none;
   }
   #logosWeb {
     bottom: 0em;
@@ -916,64 +985,66 @@ a {
     text-align: left;
   }
   #texteIntro {
+    width: 37.1em;
     bottom: -3.5em;
-    left: -9em;
-  }
-  #ficheProfil {
-    min-width: 37em;
-    margin-left: 2em;
   }
   #photoMoi {
     right: 6em;
   }
   #ficheProfil h1 {
-    width: 10em;
+    width: 11em;
+    font-size: 2.32em;
   }
   #details {
     width: 52%;
   }
-  #blocCompetences {
-    padding: 0 2em 0 2em;
-    min-width: 49em;
-  }
-  #competences {
-    min-width: 49em;
-  }
   #competences section {
     width: 28%;
-    margin: 0em;
   }
-  #competences section:nth-of-type(2) {
-    width: 44%;
+  #competences div {
+    width: 38%;
   }
   #competences h2 {
-    font-size: 1.6em;
+    font-size: 1.39em;
   }
   #competences li {
-    font-size: 1.2em;
+    font-size: 1.4em;
   }
   #footerContenu {
-    min-width: 53em;
     height: 18em;
   }
   #footerSite #adresse {
     font-size: 0.8em;
-    position: relative;
-    left: 2em;
   }
   #footerSite #imgFooter {
     display: none;
   }
+  #recapMenu {
+    width: 34%;
+  }
   #footerSite #liensInternet {
-    width: 44%;
+    width: 31%;
+  }
+  #liensInternet li {
+    background-size: 40px 160px;
+    height: 40px;
+    width: 40px;
+    margin: 0 0.5em 0 0.5em;
+  }
+  #liensInternet li:hover {
+    background-size: 40px 160px;
+  }
+  #liensInternet .ic_linkedin {
+    background-position: 0px -80px;
+  }
+  #liensInternet .ic_behance {
+    background-position: 0px -120px;
+  }
+  #liensInternet .ic_twitter {
+    background-position: 0px -40px;
   }
   #footerSite #recapMenu {
-    position: relative;
-    left: 8em;
     font-size: 0.89em;
-  }
-  #footerSite #liensInternet h2 {
-    display: none;
   }
   #footerSite #adresse #coord {
     top: 1em;
@@ -981,19 +1052,39 @@ a {
   #liensInternet ul {
     text-align: right;
   }
-  #footerSite p {
-    width: 33%;
-    right: 1.8em;
-    top: 8.8em;
-  }
-  #monBlog {
-    min-width: 37em;
+  #footerSite p:last-child {
+    width: 35%;
+    top: 4.8em;
   }
   #mesArticles {
-    width: 63%;
-    margin-right: 0.5em;
-    margin-left: 1.9em;
+    width: 65%;
+    margin-right: 1.25em;
   }
+  #mesArticles > header > h1 {
+    font-size: 2.32em;
+  }
+  #recherche,
+  #newsletter,
+  #tousLesArticles {
+    width: 30%;
+    margin-left: 1.25em;
+  }
+  #recherche > h1,
+  #newsletter > h1,
+  #tousLesArticles > h1 {
+    font-size: 2.32em;
+  }
+  #formContact {
+    width: 25em;
+  }
+  #formulaire input,
+  #formulaire textarea {
+    width: 21.5em;
+  }
+}
+/*-----------------MEDIAQUERIES_Mobile_paysage------*/
+@media screen and (max-width: 767px) {
+  
 }
 /*-----------------MEDIAQUERIES_MOBILE_portrait------*/
 @media screen and (min-width: 100px) and (max-width: 599px) {
