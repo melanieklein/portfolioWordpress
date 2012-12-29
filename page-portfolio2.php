@@ -23,22 +23,39 @@ get_header();
 							<p>beautiful and ergonomic websites&nbsp;!</p>
 						</div>
 					</div>
-					<ul class="travaux">
-						<?php
-						$loop = new WP_query(array('post_type'=>'works'));
+					<div id="conteneurSlider">
+						<div class="button" id="leftButton">
+							<button><</button>
+						</div>
+						<div id ="carousel" class="imagesPortfolio">
+							<ul id="many" class="clearfix">
+								<?php
+								$loop = new WP_query(array('post_type'=>'works'));
 								
-						if($loop->have_posts()):
-						while($loop->have_posts()):
-						$loop->the_post();
-						$postId = get_the_ID();
-						$thumb = wp_get_attachment_image_src(get_post_thumbnail_id($postId->ID), 'full');
-						$url = $thumb['0'];
-						$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
-						?>
-						<li><?php echo get_post_meta($postId,'webdesign',true);?><a href="<?php echo get_permalink();?>"><?php the_post_thumbnail('thumbnail');?></a></li>
-						<?php endwhile;
-						endif;?>
-					</ul>			
+								if($loop->have_posts()):
+								while($loop->have_posts()):
+								$loop->the_post();
+								$postId = get_the_ID();
+								$thumb = wp_get_attachment_image_src(get_post_thumbnail_id($postId->ID), 'full');
+								$url = $thumb['0'];
+								$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
+								?>
+
+								<li><a class="thumbnail" href="<?= $url; ?>"><?php the_post_thumbnail('thumbnail');?></a>
+									<figcaption>		                            
+		                            	<p><?php the_content();?></p>                            
+		                        	</figcaption>
+								</li>
+
+		                        <?php endwhile;
+								endif;?>
+							</ul>
+							
+						</div>
+						<div class="button" id="rightButton">
+							<button>></button>
+						</div>
+					</div>
 				</section>
 						
 				<section id="catGraph">
@@ -84,4 +101,4 @@ get_header();
 				</section>
 			</div>
 		</section>
-		<?php get_footer();?>
+		<?php get_footer();

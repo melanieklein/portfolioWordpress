@@ -29,7 +29,7 @@ get_header();
                 </section>
         </section> 
         <div id="imgContact">
-            <img src="http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2012/11/imgContact.png" alt="Image bonhomme contact">
+            <img src="http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2012/11/imgContact.png" alt="Contactez-moi !">
         </div>             
 	</div>
     <?php get_footer();

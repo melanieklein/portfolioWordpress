@@ -500,6 +500,39 @@ margin-top: 4em;
   color: @rose;
 }
 
+
+/*-------------SANS JS----------*/
+.travaux li {
+  display: inline;
+  width: 11em;
+  margin-right: 2em;
+  margin-left: 2em;
+
+  &:hover img {
+    opacity: 1;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  img {
+    box-shadow: 0px 0px 5px #000000;
+    opacity: 0.8;
+  }
+}
+
+.introCat {
+  height: 20em;
+}
+
+
+
+
 /*-------------STYLE PAGE BLOG--------------*/
 
 #contenerBlog {
@@ -548,7 +581,7 @@ margin-top: 4em;
   a {
     color: @rose;
     &:hover {
-        color: #000000;
+        color: @blanc;
     }
   }
   
@@ -586,6 +619,7 @@ margin-top: 4em;
     }
   }
 }
+
 
 #tousLesArticles {
   width: 24%;
@@ -1189,9 +1223,6 @@ padding-bottom: 3em;
   font-size: 1.4em;
 }
   
-#footerContenu {
-  height: 18em;
-}
 
 #footerSite #adresse {
   font-size: 0.8em;
@@ -1203,8 +1234,9 @@ padding-bottom: 3em;
 
 #recapMenu {
   width: 34%;
+  padding-top: 1.2em;
 }
-#footerSite #liensInternet {
+#liensInternet {
   width: 31%;
 }
 
@@ -1274,13 +1306,172 @@ background-position: 0px -40px;
 /*-----------------MEDIAQUERIES_Mobile_paysage------*/
 @media screen and (max-width: 767px){
 
+.section {
+  min-width: 26em;
+  max-width: 30em;
+}
+
+#logo {
+  left: 2.5em;
+}
+
+#navigation {
+  font-size: 0.8em;
+
+  li {
+    margin: 0 1em 0 1em;
+  }
+}
+
+#logosWeb {
+
+  left: -4.5em;
+
+ li {
+  background-size: 50px 200px;
+  height: 50px;
+  width: 50px;
+
+  &:hover {
+      background-image: url("http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2012/10/logosAccueilHover.png");
+      background-size: 50px 200px;
+    }
 
 }
-/*-----------------MEDIAQUERIES_MOBILE_portrait------*/
+}
 
-@media screen and (min-width: 100px) and (max-width: 599px) {
-  
-  #banner h2 {
+#logosWeb .ic_linkedin {
+background-position: 0px -100px;
+}
+
+#logosWeb .ic_behance {
+background-position: 0px -150px;
+}
+
+#logosWeb .ic_facebook {
+background-position: 0px -50px;
+}
+
+#texteIntro {
+  font-size: 0.9em;
+}
+
+#texteIntro {
+  width: 31.1em;
+}
+
+#photoMoi {
+  display: none;
+}
+
+#ficheProfil {
+  top: -2em;
+  height: 14em;
+
+h1 {
+  width: 13em;
+}
+}
+#details {
+  width: 100%;
+  font-size: 0.9em;
+}
+
+#imageOrdinateur img {
+  width:420px;
+  height: 353px;
+}
+
+#competences {
+  height: 18em;
+
+  h2 {
+    font-size: 0.82em;
+  }
+
+  li {
+  font-size: 1em;
+  }
+}
+
+#recapMenu {
+  width: 34%;
+
+ li a {
+  font-size: 1.6em;
+}
+}
+
+#footerSite #adresse {
+  font-size: 0.6em;
+}
+
+#adresse {
+  width: 43.5%;
+}
+
+#liensInternet {
+width: 20%;
+ li {
+  background-size: 30px 120px;
+  height: 30px;
+  width: 30px;
+  margin: 0em;
+  &:hover {
+    background-size: 30px 120px;
+  }
+}
+}
+#liensInternet .ic_linkedin {
+background-position: 0px -60px;
+}
+
+#liensInternet .ic_behance {
+background-position: 0px -90px;
+}
+
+#liensInternet .ic_twitter {
+background-position: 0px -30px;
+}
+
+#footerSite {
+  height: 15em;
+
+ p:last-child {
+  width: 38%;
+  top: 2.8em;
+  font-size: 0.8em;
+}
+}
+
+
+#tousLesArticles {
+  display: none;
+}
+
+
+.articles {
+    text-align: center;
+  }
+  .imageArticle {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #mesArticles {
+    width: 100%;
+
+    >header>h1 {
+      font-size: 2.1em;
+    }
+  }
+
+  #formContact {
+    width: 100%;
+  }
+
+  #imgContact {
     display: none;
   }
 }
+/*-----------------MEDIAQUERIES_MOBILE_portrait------*/

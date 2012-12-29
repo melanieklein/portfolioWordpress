@@ -28,7 +28,7 @@ get_header();?>
 						<?php the_post_thumbnail('thumbnail');?>
 		            </div>
 		            <div class="contenuArticle">
-		                <em><?php the_title();?></em>
+		                <em><a href="<?php echo get_permalink();?>"><?php the_title();?></a></em>
 		                <p class="dateArticle"><?php _e('Publié le')?> <?php echo(get_the_date());?></p>
 		                <p class="texteArticle"><?php the_excerpt();?></p>
 		            </div>

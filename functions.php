@@ -29,7 +29,7 @@ if(!function_exists('create_post_type')){
                         'name' => __('Travaux'),
                         'singular_name' => __('Travail')
                         ),
-                    'supports' => array('title','editor','thumbnail','post-formats'),
+                    'supports' => array('title','editor','thumbnail','post-formats','custom-fields'),
                     'public' => true, 
                     'has_archive' => true
                     )
