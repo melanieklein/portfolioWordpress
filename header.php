@@ -9,6 +9,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title><?php bloginfo('name');?></title>
+        <link rel="icon" type="image/png" href="img/icon.png">
         <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
         <meta name="description" content="Site personnel de Melanie Klein - webdesigner">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->

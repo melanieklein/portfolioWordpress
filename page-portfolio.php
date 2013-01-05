@@ -35,7 +35,7 @@ get_header();
 						$url = $thumb['0'];
 						$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
 						?>
-						<li><?php echo get_post_meta($postId,'webdesign',true);?><a href="<?php echo get_permalink();?>"><?php the_post_thumbnail('thumbnail');?></a></li>
+						<li><a href="<?php the_permalink();?>"><?php the_post_thumbnail('thumbnail');?></a></li>
 						<?php endwhile;
 						endif;?>
 					</ul>			

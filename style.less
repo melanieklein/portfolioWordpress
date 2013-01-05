@@ -56,6 +56,11 @@ body {
 
 a {
   text-decoration:none;
+  color: @rose;
+  &:hover {
+    color: @blanc;
+  }
+
 }
 
 .section {
@@ -158,13 +163,6 @@ a {
     color: @rose;
   }
 
-  a {
-    color: @rose;
-
-    &:hover {
-      color: @blanc;
-    }
-  }
 }
 
 #imgLienPortfolio {
@@ -504,12 +502,18 @@ margin-top: 4em;
 /*-------------SANS JS----------*/
 .travaux li {
   display: inline;
-  width: 11em;
-  margin-right: 2em;
-  margin-left: 2em;
+  width: 10.9em;
+  margin-right: 1.77em;
+  margin-left: 1.77em;
 
-  &:hover img {
-    opacity: 1;
+  a {
+    display: inline-block;
+    height: 10.9em;
+    border: 6px solid @grisClair;
+    -moz-box-shadow: 0px 0px 5px #000000;
+    -webkit-box-shadow: 0px 0px 5px #000000;
+    -o-box-shadow: 0px 0px 5px #000000;
+    -ms-box-shadow: 0px 0px 5px #000000;
   }
 
   &:last-child {
@@ -521,8 +525,7 @@ margin-top: 4em;
   }
 
   img {
-    box-shadow: 0px 0px 5px #000000;
-    opacity: 0.8;
+    border: 1px solid @rose;
   }
 }
 
@@ -530,6 +533,30 @@ margin-top: 4em;
   height: 20em;
 }
 
+
+/*------------SINGLE WORKS------------------*/
+#singleWork {
+
+  margin-top: 2em;
+  footer {
+    clear:both;
+  }
+  h2 {
+    color: #A2185B;
+    font-size: 1.6em;
+    text-transform: uppercase;
+  }
+  p {
+    line-height: 1.5em;
+    font-size: 1.14em;
+  }
+}
+
+.imgTravail {
+  float:left;
+  width:29.9em;
+  margin-right: 2.3em;
+}
 
 
 
@@ -577,13 +604,6 @@ margin-top: 4em;
   margin-bottom: -1em;
 }
 .contenuArticle {
-
-  a {
-    color: @rose;
-    &:hover {
-        color: @blanc;
-    }
-  }
   
   em {
     color: @rose;
@@ -610,14 +630,6 @@ margin-top: 4em;
   padding: 0.2em;
   width: 32%;
   margin: 0 auto;
-
-  a {
-  color: @rose;
-
-    &:hover {
-    color: @blanc;
-    }
-  }
 }
 
 
@@ -689,10 +701,6 @@ margin-top: 4em;
   }
   a {
     font-size: 1em;
-    color: @rose;
-    &:hover {
-      color: @blanc;
-    }
   }
 }
 
@@ -802,12 +810,7 @@ padding-bottom: 3em;
 .logged-in-as {
   color: @grisFonce;
   font-size: 1.1em;
-  a {
-    color: @rose;
-    &:hover {
-      color: @blanc;
-    }
-  }
+
 }
 
 .comment-notes {
@@ -865,6 +868,7 @@ padding-bottom: 3em;
     background-color: rgba(193, 193, 193, 0.6);
     position: relative;
     bottom: 1em;
+    display: table;
 
     >div {
       display: table;
@@ -882,12 +886,6 @@ padding-bottom: 3em;
     }
 }
 
-#nbreComm {
-  color: @rose;
-  &:hover {
-    color: @blanc;
-  }
-}
 
 /*-------------PAGE CONTACT-------------*/
 #contenuContact {
@@ -1062,11 +1060,20 @@ padding-bottom: 3em;
   top: 1em;
   font-size: 0.9em;
 
+
+
   li {
     padding-left: 2.3em;
     background-image: url("http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2012/11/iconesCoord.png");
     background-repeat: no-repeat;
     height: 26px;
+
+    a {
+      color: @blanc;
+      &:hover {
+      color: @rose;
+      }
+    }
 
     &:first-child {
       background-position: 0px -25px;
@@ -1147,14 +1154,6 @@ padding-bottom: 3em;
   color: @blanc;
   font-family: @heroLight;
   text-shadow:1px 1px 2px #4F4F4F;
-
-  a {
-    color: @blanc;
-
-    &:hover {
-      color: @rose;
-    }
-  }
 }
 
 /*-----------------MEDIAQUERIES_IPAD_paysage------*/
