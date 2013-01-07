@@ -4,6 +4,7 @@
 add_action('after_setup_theme', 'portfolio_setup');
 add_action('init','create_post_type');
 add_filter('excerpt_more', 'new_excerpt_more');
+add_action('init','build_taxonomies');
 
 
 
@@ -72,6 +73,18 @@ if(!function_exists('create_post_type')){
     }
 	
 	
+}
+
+if(! function_exists('build_taxonomies')){
+function build_taxonomies(){
+register_taxonomy('categories', 'works', array
+    ('label' => 'Catégorie du travail',
+     'hierarchical' => true,
+      'query_var' => true, 
+      'rewrite' => array('slug'=>'techniques'),
+
+      ));
+}
 }
 
 function new_excerpt_more($more) {

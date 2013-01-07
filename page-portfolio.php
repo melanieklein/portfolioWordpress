@@ -25,7 +25,8 @@ get_header();
 					</div>
 					<ul class="travaux">
 						<?php
-						$loop = new WP_query(array('post_type'=>'works'));
+						$args = array('post_type' => 'works', 'categories' => 'web');
+						$loop = new WP_query($args);
 								
 						if($loop->have_posts()):
 						while($loop->have_posts()):
@@ -50,37 +51,22 @@ get_header();
 							<p>at graphics design and layout</p>
 						</div>
 					</div>
-					<div id="conteneurSlider">
-						<div class="button" id="leftButton">
-							<button><</button>
-						</div>
-						<div id ="carousel" class="imagesPortfolio">
-							<ul id="many" class="clearfix">
-								<?php
-								$loop = new WP_query(array('post_type'=>'works'));
-									
-								if($loop->have_posts()):
-								while($loop->have_posts()):
-								$loop->the_post();
-								$postId = get_the_ID();
-								$thumb = wp_get_attachment_image_src(get_post_thumbnail_id($postId->ID), 'full');
-								$url = $thumb['0'];
-								$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
-								?>
-
-								<li><a class="thumbnail" href="<?= $url; ?>"><?php the_post_thumbnail('thumbnail');?></a>
-									<figcaption>		                            
-				                        <p><?php the_content();?></p>                            
-				                    </figcaption>
-								</li>								
-			                    <?php endwhile;
-								endif;?>
-							</ul>							
-						</div>
-						<div class="button" id="rightButton">
-							<button>></button>
-						</div>
-					</div>
+					<ul class="travaux">
+						<?php
+						$args = array('post_type' => 'works', 'categories' => '2d');
+						$loop = new WP_query($args);
+								
+						if($loop->have_posts()):
+						while($loop->have_posts()):
+						$loop->the_post();
+						$postId = get_the_ID();
+						$thumb = wp_get_attachment_image_src(get_post_thumbnail_id($postId->ID), 'full');
+						$url = $thumb['0'];						
+						?>
+						<li><a href="<?php the_permalink();?>"><?php the_post_thumbnail('thumbnail');?></a></li>
+						<?php endwhile;
+						endif;?>
+					</ul>
 				</section>
 			</div>
 		</section>

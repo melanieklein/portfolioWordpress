@@ -25,7 +25,7 @@ get_header();?>
 				<article class="articles">
 					<h1 class="outliner"><?php the_title();?></h1>
 		            <div class="imageArticle">
-						<?php the_post_thumbnail('thumbnail');?>
+						<a href="<?php echo get_permalink();?>"><?php the_post_thumbnail('thumbnail');?></a>
 		            </div>
 		            <div class="contenuArticle">
 		                <em><a href="<?php echo get_permalink();?>"><?php the_title();?></a></em>

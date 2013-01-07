@@ -4,7 +4,7 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=<?php bloginfo('language');?>> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang=<?php bloginfo('language');?>> <!--<![endif]-->
 <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-    <html class"no-js">
+    <html lang='fr'>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -13,7 +13,7 @@
         <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
         <meta name="description" content="Site personnel de Melanie Klein - webdesigner">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link rel="stylesheet" href=<?php bloginfo('stylesheet_url');?>>
+        <link rel="stylesheet" href=<?php bloginfo('stylesheet_url');?>>        
         <?php wp_head();?>
     </head>
     <body id="accueil">

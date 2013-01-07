@@ -48,8 +48,11 @@
 		    </section>
 		</footer>
 	</div>
+	
 	<script src="<?php echo get_bloginfo('template_directory') ;?>/scripts/jquery.js"></script>
 	<script src="<?php echo get_bloginfo('template_directory') ;?>/scripts/script.js"></script>
+	<script src="<?php echo get_bloginfo('template_directory') ;?>/scripts/fancybox.pack.js"></script>
+
 	<script>
 				jQuery( function() {
 					jQuery( '#many a.thumbnail' ).heplbox();

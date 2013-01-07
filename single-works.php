@@ -1,10 +1,11 @@
 <?php get_header(); ?>
 
   <?php if (have_posts()) : ?>
-    <?php while (have_posts()) : the_post(); ?>
-              <?php add_image_size( 'workSize', 413, auto, true ); ?>
-            
-
+    <?php while (have_posts()) : the_post();
+            $postId = get_the_ID();
+            $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($postId->ID), 'full');
+            $url = $thumb['0']; 
+            add_image_size( 'workSize', 413, auto, true ); ?>
 
  <div id="singleWork" class="section">
 
@@ -14,7 +15,7 @@
              <article class="article">                
 
               <div class="imgTravail">    
-                  <?php the_post_thumbnail('workSize'); ?>
+                  <a class="fancybox" href="<?php echo $url; ?>"><?php the_post_thumbnail('workSize'); ?></a>
                 </div>
                 <div class="infosTravail">
                   <h2><?php the_title(); ?></h2>

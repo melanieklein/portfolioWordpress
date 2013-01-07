@@ -22,6 +22,12 @@
 
 	});
 
+
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+
+
 	//Lightbox pour images du portfolio.
 	$.fn.heplbox = function( settings ) {
 
