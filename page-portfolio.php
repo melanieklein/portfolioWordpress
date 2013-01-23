@@ -17,10 +17,10 @@ get_header();
 				<section id="catWeb">
 					<h1 class="outliner">Mes travaux sur le web</h1>
 					<div class="introCat">
-						<img src="http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2012/12/catWeb.png" alt="Catégorie web" title="Catégorie web" width="220" height="220" class="iconeCat alignnone size-full wp-image-165" />
+						<img src="http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2013/01/catWeb.png" alt="Catégorie web" title="Catégorie web" width="220" height="220" class="iconeCat alignnone size-full wp-image-165" />
 						<div class="texteCat">
-							<p>You know what&nbsp;? I can make </p>
-							<p>beautiful and ergonomic websites&nbsp;!</p>
+							<p>Tu sais quoi&nbsp;? J'aime créer</p>
+							<p>de beaux sites ergonomiques&nbsp;!</p>
 						</div>
 					</div>
 					<ul class="travaux">
@@ -35,8 +35,9 @@ get_header();
 						$thumb = wp_get_attachment_image_src(get_post_thumbnail_id($postId->ID), 'full');
 						$url = $thumb['0'];
 						$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
+						add_image_size( 'portfolioSize', 250, auto);
 						?>
-						<li><a href="<?php the_permalink();?>"><?php the_post_thumbnail('thumbnail');?></a></li>
+						<li><a href="<?php the_permalink();?>"><?php the_post_thumbnail('portfolioSize');?></a></li>
 						<?php endwhile;
 						endif;?>
 					</ul>			
@@ -45,10 +46,10 @@ get_header();
 				<section id="catGraph">
 					<h1 class="outliner">Mes travaux de graphisme</h1>
 					<div class="introCat">
-						<img src="http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2012/12/catGraph.png" alt="Catégorie graphisme" title="Catégorie web" width="220" height="220" class="iconeCat alignnone size-full wp-image-165" />
+						<img src="http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2013/01/catGraph.png" alt="Catégorie graphisme" title="Catégorie web" width="220" height="220" class="iconeCat alignnone size-full wp-image-165" />
 						<div class="texteCat">
-							<p>There is more&nbsp;! I'm also good</p>
-							<p>at graphics design and layout</p>
+							<p>Il y a plus&nbsp;! Je suis aussi douée</p>
+							<p>en graphisme et en mise en page</p>
 						</div>
 					</div>
 					<ul class="travaux">
@@ -61,12 +62,40 @@ get_header();
 						$loop->the_post();
 						$postId = get_the_ID();
 						$thumb = wp_get_attachment_image_src(get_post_thumbnail_id($postId->ID), 'full');
-						$url = $thumb['0'];						
+						$url = $thumb['0'];
+						add_image_size( 'portfolioSize', 250, auto);						
 						?>
-						<li><a href="<?php the_permalink();?>"><?php the_post_thumbnail('thumbnail');?></a></li>
+						<li><a href="<?php the_permalink();?>"><?php the_post_thumbnail('portfolioSize');?></a></li>
 						<?php endwhile;
 						endif;?>
 					</ul>
+				</section>
+				<section id="catDivers">
+					<h1 class="outliner">Mes travaux dans diverses catégories</h1>
+					<div class="introCat">
+						
+						<div class="texteCat">
+							<p>Et j'ai encore d'autres talents&nbsp;!</p>
+						</div>
+					</div>
+					<ul class="travaux">
+						<?php
+						$args = array('post_type' => 'works', 'categories' => 'divers');
+						$loop = new WP_query($args);
+								
+						if($loop->have_posts()):
+						while($loop->have_posts()):
+						$loop->the_post();
+						$postId = get_the_ID();
+						$thumb = wp_get_attachment_image_src(get_post_thumbnail_id($postId->ID), 'full');
+						$url = $thumb['0'];
+						$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
+						add_image_size( 'portfolioSize', 250, auto);
+						?>
+						<li><a href="<?php the_permalink();?>"><?php the_post_thumbnail('portfolioSize');?></a></li>
+						<?php endwhile;
+						endif;?>
+					</ul>			
 				</section>
 			</div>
 		</section>

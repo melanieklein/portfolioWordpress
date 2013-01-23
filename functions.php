@@ -7,7 +7,6 @@ add_filter('excerpt_more', 'new_excerpt_more');
 add_action('init','build_taxonomies');
 
 
-
 if(!function_exists(portfolio_setup)){
     function portfolio_setup(){
         add_theme_support('post-thumbnails');

@@ -7,11 +7,11 @@
     <html lang='fr'>
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title><?php bloginfo('name');?></title>
         <link rel="icon" type="image/png" href="img/icon.png">
         <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
-        <meta name="description" content="Site personnel de Melanie Klein - webdesigner">
+        <meta name="description" content="Site personnel de Melanie Klein, webdesigner. Vous y trouverez son profil, son portfolio ainsi que ses coordonnées pour un éventuel contact">
+        <meta name="keywords" content="Mélanie, Klein, webdesigner, webdesign, web, infographie, xhoris, liège, hepl, inpres, haute école, graphisme, seraing, site, web, portfolio" ></meta>
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <link rel="stylesheet" href=<?php bloginfo('stylesheet_url');?>>        
         <?php wp_head();?>
@@ -33,5 +33,6 @@
 				    <?php wp_nav_menu('header-menu'); ?>                                         
 				</nav>	
             </div>
+
 
 			

@@ -243,13 +243,13 @@ a {
   line-height: 1.4em;
 
   p:first-child {
-  font-size: 5.8em;
+  font-size: 6.6em;
   }
 
   p:last-child {
   font-size: 4.6em;
   position: relative;
-  bottom: -0.6em;
+  bottom: -0.7em;
   }
 }
 
@@ -385,7 +385,6 @@ a {
 #contenuPortfolio {
   position: relative;
   top: 5em;
-  height: 86em;
 
   >header>h1 {
     text-align: left;
@@ -398,13 +397,12 @@ a {
 }
 
 #categories{
-height: 20em;
 margin: 0 auto;
 margin-top: 4em;
 }
 
-#catWeb, #catGraph {
-  height: 36em;
+#catWeb, #catGraph, #catDivers {
+  height: 45em;
 }
 .introCat {
   width: 83%;
@@ -431,26 +429,41 @@ margin-top: 4em;
   }
 
   p:last-child {
-    font-size: 3.96em;
+    font-size: 4.3em;
     position: relative;
     top: 0.6em;
   }
 }
 
-#catGraph .introCat img {
+#catGraph .introCat {
+  p:first-child {
+    font-size: 4.7em
+  }
+img {
   float:right;
+}
 }
 
 #catGraph .texteCat {
   float:left;
   top: 9em;
   p:last-child {
-    font-size: 4.67em;
+    font-size: 4.4em;
   }
 }
 
 #catGraph .texteCat h3{
   font-size: 4.65em;
+}
+
+#catDivers {
+  .introCat {
+    width: 100%;
+  }
+  .texteCat {
+    float: left;
+    text-align: left;
+  }
 }
 
 #conteneurSlider {
@@ -559,21 +572,22 @@ margin-top: 4em;
 /*-------------SANS JS----------*/
 .travaux li {
   display: inline-block;
-  height: 10.75em;
-  width: 10.9em;
-  margin-right: 1.77em;
-  margin-left: 1.77em;
+  margin-right: 0.28em;
+  margin-left: 0.28em;
     -webkit-transition: all 1s ease;
      -moz-transition: all 1s ease;
        -o-transition: all 1s ease;
       -ms-transition: all 1s ease;
           transition: all 1s ease;
+          vertical-align: middle;
 
   a {
     display: inline-block;
     height: 10.75em;
-    border: 6px solid @grisClair;
-    -moz-box-shadow: 0px 0px 5px #000000;
+  }
+
+  img {
+        -moz-box-shadow: 0px 0px 5px #000000;
     -webkit-box-shadow: 0px 0px 5px #000000;
     -o-box-shadow: 0px 0px 5px #000000;
     -ms-box-shadow: 0px 0px 5px #000000;
@@ -589,10 +603,8 @@ margin-top: 4em;
 
   &:hover {
 
-      -moz-transform:rotate(-3deg);
--webkit-transform:rotate(-3deg); 
--o-transform:rotate(-3deg);
--ms-transform:rotate(-3deg);
+  position: relative;
+  bottom: 1em;
   }
 }
 
@@ -959,6 +971,7 @@ padding-bottom: 3em;
   height: 48em;
   position: relative;
   top: 5em;
+
 }
 #formContact {
   float: left;
@@ -975,19 +988,17 @@ padding-bottom: 3em;
 
 #form {
   padding: 2em;
-  //font-family: "Hero";
   line-height: 1.4em;
   border: 1px solid @rose;
   background-color: rgba(193, 193, 193, 0.6);
   margin-top: 3em;
-  height: 27.5em;
+  height: 29.5em;
 }
 
 #contact {
   float: left;
   width: 50%;
   font-size: 1.4em;
-  //font-family: "Hero";
   color: @grisFonce;
 }
 #formulaire {
@@ -1002,13 +1013,14 @@ padding-bottom: 3em;
   }
 
   textarea {
-    background-color: rgba(255, 255, 255, 0.8);
-    width: 17.5em;
+    background-color: @blanc;
+    width: 21.5em;
     height: 12em;
     border: 0.5px solid @grisFonce;
     padding-left: 0.2em;
     font-family: @heroNormal;
     color: @grisFonce;
+    font-size: 0.9em;
 
     &:hover {
       border: 0.5px solid @rose;
@@ -1023,17 +1035,16 @@ padding-bottom: 3em;
 #recherche form input:first-child,
 #newsletter form input:first-child {
   margin-bottom: 1.5em;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: @blanc;
   height: 1.5em;
   width: 12em;
   border: 0.5px solid @grisFonce;
   padding-left: 0.2em;
   font-family: @heroNormal;
   color: @grisFonce;
-
+  font-size: 0.9em;
   &:hover, &:focus {
     border: 0.5px solid @rose;
-    background-color: @blanc;
   }
 }
 
@@ -1054,25 +1065,40 @@ padding-bottom: 3em;
   border: 0.5px solid @rose;
   font-size: 1em;
   cursor: pointer;
+  box-shadow: 0 0 3px @rose;
   font-family: @heroLight;
 
   &:hover {
   text-shadow: 0px 1px 0px @blanc;
   box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
-  -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 0 3px @grisFonce;
+  -moz-box-shadow: 0 0 3px @grisFonce;
   }
 }
 
 #formulaire #envoyer {
   width: 5em;
+  font-size: 1.2em;
 }
 
 #imgContact {
+  background-image: url('http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2013/01/iconesContact.png');
+  background-repeat: no-repeat;
+  background-size: 407px 400px;
   float: right;
-  width: 40%;
-  position: relative;
-  top: 10em;
+  width: 29em;
+  height: 29em;
+  margin-top: 10em;
+  cursor: pointer;
+  -webkit-transition: background-image 400ms ease-in;
+-moz-transition: background-image 400ms ease-in;
+-ms-transition: background-image 400ms ease-in;
+-o-transition: background-image 400ms ease-in;
+transition: background-image 400ms ease-in;
+  &:hover {
+    background-image: url('http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2013/01/iconesContactHover.png');
+  }
+
 }
 
 /*-------------FOOTER-------------*/

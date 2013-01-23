@@ -15,15 +15,15 @@ get_header();
 			
 			<div id="imageIntro">
 				<div>
-					<img class="imageRetina" src="http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2012/10/bonhommeOmg.png" alt="Oh my god I love design" title="Oh My God I Love Design" width="386" height="632" class="alignnone size-full wp-image-154" />
+					<img class="imageRetina" src="http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2012/10/bonhommeOmg.png" alt="Oh mon dieu j'adore le design" title="Oh My God I Love Design" width="386" height="632" class="alignnone size-full wp-image-154" />
 				</div>
 			</div>		
 
 			<div id="blocIntro">
 				<div>
 					<div id="texteOmg">
-						<p>OH MY GOD</p>
-						<p>I LOVE DESIGN</p>
+						<p>OH MON DIEU</p>
+						<p>J'ADORE LE DESIGN</p>
 					</div>
 				</div>
 					
