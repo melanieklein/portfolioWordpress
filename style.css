@@ -151,20 +151,16 @@ Text Domain: melanieklein (ptfmela.dreamdesgn.com/wordpress)
   src: url('polices/Hero Light.otf');
 }
 @font-face {
-  font-family: "Great Vibes Regular";
-  src: url('polices/GreatVibes-Regular.otf');
-}
-@font-face {
   font-family: "Hero Normal";
   src: url('polices/Hero.otf');
 }
 @font-face {
-  font-family: "League Gothic";
+  font-family: 'LeagueGothicRegular';
   src: url('polices/LeagueGothic-Regular.otf');
 }
 body {
   background-color: #eaeaea;
-  font-family: "Hero Normal", Arial, sans-serif;
+  font-family: "Hero Normal", Corbel, Arial, sans-serif;
   font-size: 14px;
   background-image: url("http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2012/10/motif1.png");
   background-repeat: repeat;
@@ -188,11 +184,11 @@ a:hover {
 }
 /*------------HEADER-----------*/
 #banner {
-  height: 10em;
+  height: 11em;
   position: relative;
 }
 #banner p {
-  font-family: "Great Vibes Regular";
+  font-family: 'Great Vibes', cursive;
   float: right;
   font-size: 3em;
   color: #555555;
@@ -216,6 +212,7 @@ a:hover {
   display: inline;
   margin-right: 2.3em;
   margin-left: 2.3em;
+  position: relative;
 }
 #navigation li:first-child {
   margin-left: 0em;
@@ -228,19 +225,63 @@ a:hover {
   font-size: 1.8em;
   font-family: "Hero Light";
 }
-#navigation a:hover,
-#navigation a:active {
-  color: #000000;
+#menu-item-70:hover:before {
+  content: "Retour à l'accueil";
+  color: #555555;
+  font-family: 'Great Vibes', cursive;
+  position: absolute;
+  font-size: 1.9em;
+  top: -2.2em;
+  left: -2.5em;
+  width: 9em;
+  background-image: url('img/rond.png');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  padding-bottom: 0.35em;
 }
-#contenu {
-  margin-top: 2em;
+#menu-item-81:hover:before {
+  content: "Mes travaux";
+  color: #555555;
+  font-family: 'Great Vibes', cursive;
+  position: absolute;
+  font-size: 1.9em;
+  top: -2.2em;
+  left: 0.3em;
+  background-image: url('img/rond.png');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  padding-bottom: 0.35em;
+}
+#menu-item-69:hover:before {
+  content: "Ce que j'ai à dire";
+  color: #555555;
+  font-family: 'Great Vibes', cursive;
+  position: absolute;
+  font-size: 1.9em;
+  top: -2.2em;
+  left: -1.7em;
+  width: 6em;
+  background-image: url('img/rond.png');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  padding-bottom: 0.35em;
+}
+#menu-item-80:hover:before {
+  content: "Contacte moi";
+  color: #555555;
+  font-family: 'Great Vibes', cursive;
+  position: absolute;
+  font-size: 1.9em;
+  top: -2.2em;
+  left: 0.1em;
+  background-image: url('img/rond.png');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  padding-bottom: 0.35em;
 }
 /*-------------PAGE D'ACCUEIL-------------*/
-#accueil #navigation li:first-child a {
-  color: #000000;
-}
 #introduction {
-  height: 40em;
+  height: 36em;
   position: relative;
   top: 8em;
 }
@@ -252,7 +293,7 @@ a:hover {
   float: right;
   width: 35.3em;
   position: relative;
-  font-family: "Hero Normal", Arial, sans-serif;
+  font-family: "Hero Normal", Corbel, Arial, sans-serif;
   color: #555555;
   font-size: 1.3em;
   line-height: 1.4em;
@@ -290,7 +331,7 @@ a:hover {
 #texteOmg p:first-child {
   font-size: 6.6em;
 }
-#texteOmg p:last-child {
+#texteOmg p + p {
   font-size: 4.6em;
   position: relative;
   bottom: -0.7em;
@@ -303,7 +344,10 @@ a:hover {
 }
 #logosWeb li {
   background-image: url("http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2012/10/logosAccueil.png");
-  background-size: 70px 280px;
+  -webkit-background-size: 70px 280px;
+  -moz-background-size: 70px 280px;
+  -ms-background-size: 70px 280px;
+  -o-background-size: 70px 280px;
   background-repeat: no-repeat;
   height: 70px;
   width: 70px;
@@ -340,7 +384,7 @@ a:hover {
   top: 3em;
 }
 #ficheProfil h1 {
-  font-family: "Great Vibes Regular";
+  font-family: 'Great Vibes', cursive;
   font-size: 2.8em;
   color: #a2185b;
   border-bottom: 5px solid #a2185b;
@@ -413,7 +457,7 @@ a:hover {
 }
 #contenuPortfolio > header > h1 {
   text-align: left;
-  font-family: "Great Vibes Regular";
+  font-family: 'Great Vibes', cursive;
   font-size: 2.8em;
   color: #a2185b;
   border-bottom: 5px solid #a2185b;
@@ -449,7 +493,7 @@ a:hover {
 .texteCat p:first-child {
   font-size: 5em;
 }
-.texteCat p:last-child {
+.texteCat p + p {
   font-size: 4.3em;
   position: relative;
   top: 0.6em;
@@ -464,7 +508,7 @@ a:hover {
   float: left;
   top: 9em;
 }
-#catGraph .texteCat p:last-child {
+#catGraph .texteCat p + p {
   font-size: 4.4em;
 }
 #catGraph .texteCat h3 {
@@ -570,15 +614,10 @@ a:hover {
 .em {
   color: #a2185b;
 }
-/*-------------SANS JS----------*/
 .travaux li {
   display: inline-block;
   margin-right: 0.28em;
   margin-left: 0.28em;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  -ms-transition: all 1s ease;
   vertical-align: middle;
 }
 .travaux li a {
@@ -590,16 +629,20 @@ a:hover {
   -webkit-box-shadow: 0px 0px 5px #000000;
   -o-box-shadow: 0px 0px 5px #000000;
   -ms-box-shadow: 0px 0px 5px #000000;
+  opacity: 0.7;
+  -webkit-transition: opacity 1s ease;
+  -moz-transition: opacity 1s ease;
+  -o-transition: opacity 1s ease;
+  -ms-transition: opacity 1s ease;
 }
-.travaux li:last-child {
+.travaux li + li + li + li {
   margin-right: 0;
 }
 .travaux li:first-child {
   margin-left: 0;
 }
-.travaux li:hover {
-  position: relative;
-  bottom: 1em;
+.travaux li:hover img {
+  opacity: 1;
 }
 .introCat {
   height: 20em;
@@ -649,7 +692,7 @@ a:hover {
 }
 #mesArticles > header > h1 {
   text-align: left;
-  font-family: "Great Vibes Regular";
+  font-family: 'Great Vibes', cursive;
   font-size: 2.8em;
   color: #a2185b;
   border-bottom: 5px solid #a2185b;
@@ -694,7 +737,7 @@ a:hover {
 }
 #tousLesArticles > h1 {
   text-align: left;
-  font-family: "Great Vibes Regular";
+  font-family: 'Great Vibes', cursive;
   font-size: 2.8em;
   color: #a2185b;
   border-bottom: 5px solid #a2185b;
@@ -710,7 +753,7 @@ a:hover {
 #recherche h1,
 #newsletter h1 {
   text-align: left;
-  font-family: "Great Vibes Regular";
+  font-family: 'Great Vibes', cursive;
   font-size: 2.8em;
   color: #a2185b;
   border-bottom: 5px solid #a2185b;
@@ -792,7 +835,7 @@ a:hover {
   width: 12em;
   border: 0.5px solid #555555;
   padding-left: 0.2em;
-  font-family: "Hero Normal", Arial, sans-serif;
+  font-family: "Hero Normal", Corbel, Arial, sans-serif;
   color: #555555;
 }
 #commentform input:hover {
@@ -805,7 +848,7 @@ a:hover {
   height: 9em;
   border: 0.5px solid #555555;
   padding-left: 0.2em;
-  font-family: "Hero Normal", Arial, sans-serif;
+  font-family: "Hero Normal", Corbel, Arial, sans-serif;
   color: #555555;
 }
 #commentform textarea:hover {
@@ -908,7 +951,7 @@ a:hover {
 }
 /*-------------PAGE CONTACT-------------*/
 #contenuContact {
-  height: 48em;
+  height: 53em;
   position: relative;
   top: 5em;
 }
@@ -917,7 +960,7 @@ a:hover {
   width: 40%;
 }
 #formContact h1 {
-  font-family: "Great Vibes Regular";
+  font-family: 'Great Vibes', cursive;
   font-size: 2.8em;
   color: #a2185b;
   border-bottom: 5px solid #a2185b;
@@ -953,7 +996,7 @@ a:hover {
   height: 12em;
   border: 0.5px solid #555555;
   padding-left: 0.2em;
-  font-family: "Hero Normal", Arial, sans-serif;
+  font-family: "Hero Normal", Corbel, Arial, sans-serif;
   color: #555555;
   font-size: 0.9em;
 }
@@ -962,6 +1005,22 @@ a:hover {
   background-color: #ffffff;
 }
 /*--------FORMULAIRES--------*/
+.feedbackForm,
+.emailSucces {
+  margin-bottom: 1em;
+  background-repeat: no-repeat;
+  padding-left: 2em;
+  padding-top: 0.5em;
+  height: 32px;
+  font-size: 1.34em;
+  color: #a2185b;
+}
+.feedBackForm {
+  background-image: url('img/attention.png');
+}
+.emailSucces {
+  background-image: url('img/emailsucces.png');
+}
 #formulaire input,
 #recherche form input:first-child,
 #newsletter form input:first-child {
@@ -971,7 +1030,7 @@ a:hover {
   width: 12em;
   border: 0.5px solid #555555;
   padding-left: 0.2em;
-  font-family: "Hero Normal", Arial, sans-serif;
+  font-family: "Hero Normal", Corbel, Arial, sans-serif;
   color: #555555;
   font-size: 0.9em;
 }
@@ -1285,6 +1344,56 @@ a:hover {
   #formulaire textarea {
     width: 21.5em;
   }
+  .introCat {
+    text-align: center;
+    height: 18em;
+  }
+  .introCat img {
+    float: none;
+  }
+  #catWeb,
+  #catGraph,
+  #catDivers {
+    height: 43em;
+  }
+  #catDivers {
+    height: 16em;
+  }
+  #catDivers .introCat {
+    display: none;
+  }
+  #catGraph .introCat img {
+    float: none;
+  }
+  .texteCat {
+    visibility: hidden;
+  }
+  .travaux li img {
+    width: 9em;
+    height: auto;
+  }
+  #formulaire input,
+  #formulaire textarea {
+    width: 17.5em;
+  }
+  #imgContact {
+    background-size: 320px auto;
+    width: 23em;
+  }
+  /*
+  .travaux li {
+  
+    margin-right:7.3em;
+    margin-left: 7.3em;
+  
+    &:nth-of-type(2){
+      margin-right:0;
+    }
+  
+    &:nth-of-type(3){
+      margin-left: 0;
+    }
+  }*/
 }
 /*-----------------MEDIAQUERIES_Mobile_paysage------*/
 @media screen and (max-width: 767px) {
@@ -1417,6 +1526,31 @@ a:hover {
   }
   #imgContact {
     display: none;
+  }
+  #recherche,
+  #newsletter {
+    width: 14.3em;
+  }
+  #recherche {
+    margin-left: 0;
+  }
+  #monArticle .imageArticle,
+  #monArticle .contenuArticle {
+    text-align: center;
+  }
+  #monArticle .imageArticle {
+    width: 100%;
+  }
+  #commentform textarea {
+    width: 31.3em;
+  }
+  .imgTravail {
+    width: 25.9em;
+    margin-right: 0;
+    float: none;
+  }
+  #imageOrdinateur img {
+    width: 392px;
   }
 }
 /*-----------------MEDIAQUERIES_MOBILE_portrait------*/

@@ -10,8 +10,49 @@ get_header();
 			
     endwhile;
 	endif;
-	?>
-		<section id="formContact">
+
+        if(isset($_POST['envoyer'])){
+            $flag=1;
+
+            if($_POST['nom'] == ''){
+                $flag=0;
+                echo "<p class='feedbackForm'>Entre ton nom</p>";
+            }
+            else if(!preg_match('/[a-zA-Z_x7f-xff][a-zA-Z0-9_x7f-xff]*/',$_POST['nom'])){
+                $flag=0;
+                echo "<p class='feedbackForm'>Entre un nom valide</p>";
+            }
+
+            if($_POST['email']=='') { 
+                $flag=0;
+                echo "Entre ton email<br>"; 
+            } else if(!eregi("^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,3})$", $_POST['email'])) { 
+                $flag=0;
+                
+                echo "<p class='feedbackForm'>Entre un email valide</p>"; 
+            }
+
+            if($_POST['message']==''){
+                $flag=0;
+                echo 'Entre un message';
+            }
+
+            if(empty($_POST)){
+                print "<p class='feedbackForm'>Vous devez remplir le formulaire</p>";
+                exit;
+            }
+            else
+            {
+                if($flag==1)
+                {
+                    wp_mail(get_option("admin_email"),trim($_POST[nom]) . " vous a envoyé un message de " . get_option("blogname"), stripslashes(trim($_POST[message])) . "From:" . trim($_POST[nom]) . " <".trim($_POST[email]). ">rnReply-To:" . trim($_POST[email]) );
+                    echo "<p class='emailSucces'>Merci ! Ton message a bien été envoyé !</p>";
+                }
+            }
+        }
+        ?>
+
+        <section id="formContact">
             <h1>Contactez moi&nbsp;!</h1>
             <section id="form">
                 <h1 class="outliner">Formulaire de contact</h1>
@@ -28,6 +69,7 @@ get_header();
                     </form>
                 </section>
         </section> 
+
         <div id="imgContact">
             <!--<img width="813" height="800" class="imageRetina" src="http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2013/01/iconesContact.png" alt="Contactez-moi !">-->
         </div>             
