@@ -71,7 +71,7 @@ get_header();
         </section> 
 
         <div id="imgContact">
-            <!--<img width="813" height="800" class="imageRetina" src="http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2013/01/iconesContact.png" alt="Contactez-moi !">-->
+            
         </div>             
 	</div>
     <?php get_footer();

@@ -82,12 +82,22 @@ get_header();?>
 			<aside id="newsletter">
                 <h1>Newsletter</h1>
                 <div>
-                    <form>
-                        
-                        <input type="text" placeholder="exemple@hotmail.com" required/>
-                        <input type="submit" value="S'inscrire"/>
-                    
-                    </form>
+				<!-- Begin MailChimp Signup Form -->
+				<div id="mc_embed_signup">
+				<form action="http://facebook.us6.list-manage1.com/subscribe/post?u=4df46a13790c332afa736a5a0&amp;id=d2835a257f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+				<div class="mc-field-group">
+					<label for="mce-EMAIL">Adresse email&nbsp;:<span class="asterisk">*</span>
+				</label>
+					<input type="email" value="" placeholder="exemple@mail.com" name="EMAIL" class="required email" id="mce-EMAIL">
+				</div>
+					<div id="mce-responses" class="clear">
+						<div class="response" id="mce-error-response" style="display:none"></div>
+						<div class="response" id="mce-success-response" style="display:none"></div>
+					</div>	<div class="clear"><input type="submit" value="S'inscrire" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+				</form>
+				</div>
+
+				<!--End mc_embed_signup-->
                 </div>
             </aside>
 		</div>

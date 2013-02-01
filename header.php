@@ -23,7 +23,7 @@
         <div id="contenu">
     		<header id="banner" class="section">
                 <a href="index.php" title="Retour vers l'accueil" id="logo">
-                    <img class="imageRetina" src="http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2012/10/logoMK.png" width="681" height="200" alt="Mélanie Klein Webdesigner" title="Retour à l'accueil"/>
+                    <img src="http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2012/10/logoMK.png" width="340" height="100" alt="Mélanie Klein Webdesigner" title="Retour à l'accueil"/>
                 </a>
                         
                 <p>&laquo;&nbsp;<?php blogInfo('description');?>&nbsp;&raquo;<a href="http://quotesondesign.com" title="Source de la citation" target="_blank">*</a></p>

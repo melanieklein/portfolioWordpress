@@ -182,6 +182,30 @@ a:hover {
 .outliner {
   display: none;
 }
+input[type="submit"] {
+  margin-top: 1em;
+  background: #ddd;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#c4c4c4));
+  background: -moz-linear-gradient(top, #ededed, #c4c4c4);
+  color: #a2185b;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border: 0.5px solid #a2185b;
+  font-size: 1em;
+  cursor: pointer;
+  box-shadow: 0 0 3px #a2185b;
+  font-family: "Hero Light";
+}
+input[type="submit"]:hover {
+  text-shadow: 0px 1px 0px #ffffff;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 0 3px #555555;
+  -moz-box-shadow: 0 0 3px #555555;
+  -ms-box-shadow: 0 0 3px #555555;
+  -o-box-shadow: 0 0 3px #555555;
+}
 /*------------HEADER-----------*/
 #banner {
   height: 11em;
@@ -348,6 +372,7 @@ a:hover {
   -moz-background-size: 70px 280px;
   -ms-background-size: 70px 280px;
   -o-background-size: 70px 280px;
+  background-size: 70px 280px;
   background-repeat: no-repeat;
   height: 70px;
   width: 70px;
@@ -466,11 +491,12 @@ a:hover {
 #categories {
   margin: 0 auto;
   margin-top: 4em;
+  padding-bottom: 5em;
 }
 #catWeb,
 #catGraph,
 #catDivers {
-  height: 45em;
+  margin-bottom: 3em;
 }
 .introCat {
   width: 83%;
@@ -516,6 +542,7 @@ a:hover {
 }
 #catDivers .introCat {
   width: 100%;
+  height: 15em;
 }
 #catDivers .texteCat {
   float: left;
@@ -622,7 +649,6 @@ a:hover {
 }
 .travaux li a {
   display: inline-block;
-  height: 10.75em;
 }
 .travaux li img {
   -moz-box-shadow: 0px 0px 5px #000000;
@@ -1046,34 +1072,33 @@ a:hover {
 #newsletter form input:first-child {
   margin-bottom: 0;
 }
-#formulaire #envoyer,
+/*#formulaire #envoyer,
 #recherche form input:last-child,
 #newsletter form input:last-child {
   margin-top: 1em;
   background: #ddd;
   background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#c4c4c4));
   background: -moz-linear-gradient(top, #ededed, #c4c4c4);
-  color: #a2185b;
+  color: @rose;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
-  border: 0.5px solid #a2185b;
+  border: 0.5px solid @rose;
   font-size: 1em;
   cursor: pointer;
-  box-shadow: 0 0 3px #a2185b;
-  font-family: "Hero Light";
-}
-#formulaire #envoyer:hover,
-#recherche form input:last-child:hover,
-#newsletter form input:last-child:hover {
-  text-shadow: 0px 1px 0px #ffffff;
+  box-shadow: 0 0 3px @rose;
+  font-family: @heroLight;
+
+  &:hover {
+  text-shadow: 0px 1px 0px @blanc;
   box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
-  -webkit-box-shadow: 0 0 3px #555555;
-  -moz-box-shadow: 0 0 3px #555555;
-  -ms-box-shadow: 0 0 3px #555555;
-  -o-box-shadow: 0 0 3px #555555;
-}
+  -webkit-box-shadow: 0 0 3px @grisFonce;
+  -moz-box-shadow: 0 0 3px @grisFonce;
+  -ms-box-shadow: 0 0 3px @grisFonce;
+  -o-box-shadow: 0 0 3px @grisFonce;
+  }
+}*/
 #formulaire #envoyer {
   width: 5em;
   font-size: 1.2em;
@@ -1452,8 +1477,8 @@ a:hover {
     font-size: 0.9em;
   }
   #imageOrdinateur img {
-    width: 420px;
-    height: 353px;
+    width: 210px;
+    height: auto;
   }
   #competences {
     height: 18em;
@@ -1549,11 +1574,102 @@ a:hover {
     margin-right: 0;
     float: none;
   }
-  #imageOrdinateur img {
-    width: 392px;
-  }
 }
 /*-----------------MEDIAQUERIES_MOBILE_portrait------*/
+@media screen and (max-width: 320px) {
+  #logo img {
+    width: 207px;
+  }
+  #ficheProfil h1 {
+    width: 8em;
+  }
+  .section {
+    max-width: 20em;
+    min-width: 20em;
+  }
+  #logosWeb {
+    width: 21em;
+  }
+  #logosWeb li {
+    margin-right: 0.65em;
+    margin-left: 0.65em;
+  }
+  #texteIntro {
+    width: 20em;
+  }
+  #imageOrdinateur img {
+    width: 107px;
+    height: auto;
+  }
+  #recapMenu li a {
+    font-size: 1.2em;
+  }
+  #adresse li {
+    font-size: 1.4em;
+  }
+  #coord {
+    font-size: 0.7em;
+  }
+  #coord li {
+    padding-left: 4em;
+  }
+  #liensInternet {
+    padding-top: 1em;
+  }
+  #footerSite p:last-child {
+    top: 0.8em;
+    width: 55%;
+  }
+  .retourArticles {
+    font-size: 1em;
+  }
+  #recherche,
+  #newsletter {
+    width: 9.3em;
+  }
+  #recherche form input:first-child,
+  #newsletter form input:first-child {
+    width: 7em;
+  }
+  #formulaire input,
+  #formulaire textarea {
+    width: 13.5em;
+  }
+  .article {
+    display: block;
+  }
+  .article > div {
+    display: block;
+  }
+  .imgTravail img,
+  .imageArticle img {
+    width: 17.9em;
+    height: auto;
+  }
+  #singleWork h2 {
+    font-size: 1em;
+  }
+  #singleWork p {
+    font-size: 0.9em;
+  }
+  .contenuArticle em {
+    font-size: 1.2em;
+  }
+  .texteArticle,
+  #respond {
+    font-size: 0.9em;
+  }
+  #commentform textarea {
+    width: 15.3em;
+  }
+  code {
+    display: block;
+    width: 23em;
+  }
+  #mesArticles {
+    width: 94%;
+  }
+}
 /*! fancyBox v2.1.3 fancyapps.com | fancyapps.com/fancybox/#license */
 .fancybox-wrap,
 .fancybox-skin,

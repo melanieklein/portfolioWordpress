@@ -7,20 +7,6 @@
 	$(".boutonCommenter").on("click",function(){
 	$(".commentForm").show();
 	});
-	
-	//Redimensionner images en 2 fois plus petit.
-	$(window).load(function() {
-
-  		var images = $('.imageRetina');
-
-    	images.each(function(i) {
-
-     	 $(this).width($(this).width() / 2);
-      	$(this).height($(this).height() / 2);
-
-    	});
-
-	});
 
 
 	$(document).ready(function() {

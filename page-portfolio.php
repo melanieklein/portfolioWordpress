@@ -35,7 +35,7 @@ get_header();
 						$thumb = wp_get_attachment_image_src(get_post_thumbnail_id($postId->ID), 'full');
 						$url = $thumb['0'];
 						$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
-						add_image_size( 'portfolioSize', 250, auto);
+						add_image_size( 'portfolioSize', 200, 200, true );
 						?>
 						<li><a href="<?php the_permalink();?>"><?php the_post_thumbnail('portfolioSize');?></a></li>
 						<?php endwhile;
@@ -63,7 +63,7 @@ get_header();
 						$postId = get_the_ID();
 						$thumb = wp_get_attachment_image_src(get_post_thumbnail_id($postId->ID), 'full');
 						$url = $thumb['0'];
-						add_image_size( 'portfolioSize', 250, auto);						
+						add_image_size( 'portfolioSize', 200, 200, true );						
 						?>
 						<li><a href="<?php the_permalink();?>"><?php the_post_thumbnail('portfolioSize');?></a></li>
 						<?php endwhile;
@@ -90,7 +90,7 @@ get_header();
 						$thumb = wp_get_attachment_image_src(get_post_thumbnail_id($postId->ID), 'full');
 						$url = $thumb['0'];
 						$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
-						add_image_size( 'portfolioSize', 250, auto);
+						add_image_size( 'portfolioSize', 200, 200, true );
 						?>
 						<li><a href="<?php the_permalink();?>"><?php the_post_thumbnail('portfolioSize');?></a></li>
 						<?php endwhile;
