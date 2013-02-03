@@ -80,14 +80,21 @@ Text Domain: melanieklein (ptfmela.dreamdesgn.com/wordpress)
 }
 
 @font-face {
-	font-family: 'LeagueGothicRegular';
-	src: url('polices/LeagueGothic-Regular.otf');
+    font-family: 'LeagueGothicRegular';
+    src: url('polices/League_Gothic-webfont.eot');
+    src: url('polices/League_Gothic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('polices/League_Gothic-webfont.woff') format('woff'),
+         url('polices/League_Gothic-webfont.ttf') format('truetype'),
+         url('polices/League_Gothic-webfont.svg#LeagueGothicRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 @heroNormal: "Hero Normal", Corbel, Arial, sans-serif;
 @heroLight: "Hero Light";
 @greatVibes: 'Great Vibes', cursive;
-@leagueGothic: "League Gothic";
+@leagueGothic: 'LeagueGothicRegular';
 
 @grisClair: #C1C1C1;
 @grisFonce: #555555;
@@ -209,7 +216,7 @@ input[type="submit"] {
   top: -2.2em;
   left: -2.5em;
   width: 9em;
-    background-image: url('img/rond.png');
+    background-image: url('http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2013/02/rond.png');
   background-repeat: no-repeat;
 background-position: center bottom;
 padding-bottom: 0.35em;
@@ -223,7 +230,7 @@ padding-bottom: 0.35em;
   font-size: 1.9em;
   top: -2.2em;
   left: 0.3em;
-    background-image: url('img/rond.png');
+    background-image: url('http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2013/02/rond.png');
   background-repeat: no-repeat;
 background-position: center bottom;
 padding-bottom: 0.35em;
@@ -238,7 +245,7 @@ padding-bottom: 0.35em;
   top: -2.2em;
   left: -1.7em;
   width: 6em;
-  background-image: url('img/rond.png');
+  background-image: url('http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2013/02/rond.png');
   background-repeat: no-repeat;
 background-position: center bottom;
 padding-bottom: 0.35em;
@@ -252,7 +259,7 @@ padding-bottom: 0.35em;
   font-size: 1.9em;
   top: -2.2em;
   left: 0.1em;
-    background-image: url('img/rond.png');
+    background-image: url('http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2013/02/rond.png');
   background-repeat: no-repeat;
 background-position: center bottom;
 padding-bottom: 0.35em;
@@ -333,38 +340,45 @@ padding-bottom: 0.35em;
   width: 30em;
 
   li {
-    background-image: url("http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2012/10/logosAccueil.png");
-    -webkit-background-size: 70px 280px;
-    -moz-background-size: 70px 280px;
-    -ms-background-size: 70px 280px;
-    -o-background-size: 70px 280px;
-    background-size: 70px 280px;
+    background-image: url("http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2013/02/iconesAccueil.png");
+    -webkit-background-size: 140px 280px;
+    -moz-background-size: 140px 280px;
+    -ms-background-size: 140px 280px;
+    -o-background-size: 140px 280px;
+    background-size: 140px 280px;
     background-repeat: no-repeat;
     height: 70px;
     width: 70px;
     display: inline-block;
     margin-right: 1.45em;
     margin-left: 1.45em;
-
-    &:hover {
-      background-image: url("http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2012/10/logosAccueilHover.png");
-      background-size: 70px 280px;
-    }
   }
 
   .ic_twitter {
     background-position: 0px 0px;
+        &:hover {
+      background-position: -70px 0px;
+    }
     margin-right: 0;
   }
   .ic_facebook {
     background-position: 0px -70px;
+        &:hover {
+      background-position: -70px -70px;
+    }
   }
   .ic_linkedin{
     background-position: 0px -140px;
     margin-left: 0;
+        &:hover {
+      background-position: -70px -140px;
+    }
   }
   .ic_behance {
     background-position: 0px -210px;
+        &:hover {
+      background-position: -70px -210px;
+    }
   }
 
   a {
@@ -494,7 +508,7 @@ padding-bottom: 5em;
 .texteCat {
   float: right;
   width: 70%;
-  font-family: "League Gothic";
+  font-family: @leagueGothic;
   color: #a2185b;
   text-transform: uppercase;
   text-align:right;
@@ -610,7 +624,7 @@ img {
     background:#DAA3BD;
     cursor: pointer;
     border: 1px solid @rose;
-    font-family: "LeagueGothic-Regular";
+    font-family: @leagueGothic;
     color: @rose;
   }
 }
@@ -657,9 +671,9 @@ img {
 
 .travaux li {
   display: inline-block;
-  margin-right: 0.28em;
-  margin-left: 0.28em;
-          vertical-align: middle;
+margin-right: 1.085em;
+margin-left: 1.085em;
+          height:20em;
 
   a {
     display: inline-block;
@@ -681,7 +695,7 @@ img {
     margin-right: 0;
   }
 
-  &:first-child {
+  &:first-child, &:nth-child(5) {
     margin-left: 0;
   }
 
@@ -858,7 +872,7 @@ img {
     margin: 0.3em 0 1.3em 0;
   }
   li {
-    list-style-image: url("img/iconeArticle.png");
+    list-style-image: url("http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2013/02/iconeArticle.png");
     margin-left: 1.4em;
   }
   a {
@@ -1131,11 +1145,11 @@ padding-bottom: 3em;
 }
 
 .feedBackForm {
-  background-image: url('img/attention.png');
+  background-image: url('http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2013/02/attention.png');
 }
 
 .emailSucces {
-  background-image: url('img/emailsucces.png');
+  background-image: url('http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2013/02/emailsucces.png');
 }
 
 #formulaire input,
@@ -1160,41 +1174,13 @@ padding-bottom: 3em;
   margin-bottom: 0;
 }
 
-/*#formulaire #envoyer,
-#recherche form input:last-child,
-#newsletter form input:last-child {
-  margin-top: 1em;
-  background: #ddd;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#c4c4c4));
-  background: -moz-linear-gradient(top, #ededed, #c4c4c4);
-  color: @rose;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border: 0.5px solid @rose;
-  font-size: 1em;
-  cursor: pointer;
-  box-shadow: 0 0 3px @rose;
-  font-family: @heroLight;
-
-  &:hover {
-  text-shadow: 0px 1px 0px @blanc;
-  box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
-  -webkit-box-shadow: 0 0 3px @grisFonce;
-  -moz-box-shadow: 0 0 3px @grisFonce;
-  -ms-box-shadow: 0 0 3px @grisFonce;
-  -o-box-shadow: 0 0 3px @grisFonce;
-  }
-}*/
-
 #formulaire #envoyer {
   width: 5em;
   font-size: 1.2em;
 }
 
 #imgContact {
-  background-image: url('http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2013/01/iconesContact.png');
+  background-image: url('http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2013/02/iconesContact_d435a48880a6ca271a828523fdbe74b3.png');
   background-repeat: no-repeat;
   background-size: 407px 400px;
   float: right;
@@ -1216,7 +1202,7 @@ transition: background-image 400ms ease-in;
 /*-------------FOOTER-------------*/
 #footerSite {
   width: 100%;
-  background-image: url("img/motifFooter2.png");
+  background-image: url('http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2013/02/motifFooter2.png');
   background-repeat: repeat-x;
   height:21em;
   clear: both;
@@ -1318,16 +1304,11 @@ transition: background-image 400ms ease-in;
     display: inline-block;
     margin-right: 0.8em;
     margin-left: 0.8em;
-    background-image: url("http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2012/11/iconesFooter.png");
-    background-size: 60px 240px;
+    background-image: url("http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2013/02/iconesFooter1.png");
+    background-size: 120px 241px;
     background-repeat: no-repeat;
     height: 60px;
     width: 60px;
-
-    &:hover {
-      background-image: url("http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2012/11/iconesFooterHover.png");
-      background-size: 60px 240px;
-    }
 
     a {
       display: block;
@@ -1339,20 +1320,32 @@ transition: background-image 400ms ease-in;
 
   .ic_facebook { 
     background-position: 0px 0px;
+    &:hover {
+      background-position: -60px -1px;
+    }
   }
 
   .ic_twitter {
     background-position: 0px -60px;
     margin-right: 0;
+        &:hover {
+      background-position: -60px -61px;
+    }
   }
 
   .ic_linkedin {
     background-position: 0px -120px;
     margin-left: 0;
+        &:hover {
+      background-position: -60px -121px;
+    }
   }
 
   .ic_behance {
     background-position: 0px -180px;
+        &:hover {
+      background-position: -60px -181px;
+    }
   }
 }
 
@@ -1449,24 +1442,37 @@ transition: background-image 400ms ease-in;
 }
 
 #liensInternet li {
-  background-size: 40px 160px;
+  background-size: 80px 160px;
   height: 40px;
   width: 40px;
   margin: 0 0.5em 0 0.5em;
   &:hover {
-    background-size: 40px 160px;
+    background-size: 80px 160px;
   }
 }
 #liensInternet .ic_linkedin {
 background-position: 0px -80px;
+&:hover {
+  background-position: -40px -80px;
+}
+}
+
+#liensInternet .ic_facebook:hover {
+  background-position: -40px 0px;
 }
 
 #liensInternet .ic_behance {
 background-position: 0px -120px;
+&:hover {
+  background-position: -40px -120px;
+}
 }
 
 #liensInternet .ic_twitter {
 background-position: 0px -40px;
+&:hover {
+  background-position: -40px -40px;
+}
 }
 
 #footerSite #recapMenu {
@@ -1517,9 +1523,7 @@ background-position: 0px -40px;
   }
 }
 
-#catWeb, #catGraph, #catDivers {
-  height: 43em;
-}
+
 
 #catDivers {
   height: 16em;
@@ -1537,9 +1541,14 @@ background-position: 0px -40px;
   visibility: hidden;
 }
 
-.travaux li img {
-  width: 9em;
+.travaux li {
+
+  height: 30em;
+
+ img {
+  width: 23em;
   height: auto;
+}
 }
 
 #formulaire input, #formulaire textarea {
@@ -1550,21 +1559,6 @@ background-position: 0px -40px;
   background-size: 320px auto;
   width: 23em;
 }
-
-/*
-.travaux li {
-
-  margin-right:7.3em;
-  margin-left: 7.3em;
-
-  &:nth-of-type(2){
-    margin-right:0;
-  }
-
-  &:nth-of-type(3){
-    margin-left: 0;
-  }
-}*/
 
 }
 
@@ -1593,13 +1587,12 @@ background-position: 0px -40px;
   left: -4.5em;
 
  li {
-  background-size: 50px 200px;
+  background-size: 100px 200px;
   height: 50px;
   width: 50px;
 
-  &:hover {
-      background-image: url("http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2012/10/logosAccueilHover.png");
-      background-size: 50px 200px;
+  &:hover {    
+      background-size: 100px 200px;
     }
 
 }
@@ -1607,14 +1600,27 @@ background-position: 0px -40px;
 
 #logosWeb .ic_linkedin {
 background-position: 0px -100px;
+&:hover {
+  background-position: -50px -100px;
+}
 }
 
 #logosWeb .ic_behance {
 background-position: 0px -150px;
+&:hover {
+  background-position: -50px -150px;
+}
 }
 
 #logosWeb .ic_facebook {
 background-position: 0px -50px;
+&:hover {
+  background-position: -50px -50px;
+}
+}
+
+#logosWeb .ic_twitter:hover {
+  background-position: -50px 0px;
 }
 
 #texteIntro {
@@ -1678,25 +1684,41 @@ h1 {
 #liensInternet {
 width: 20%;
  li {
-  background-size: 30px 120px;
+  background-size: 60px 120px;
   height: 30px;
   width: 30px;
   margin: 0em;
   &:hover {
-    background-size: 30px 120px;
-  }
+  background-size: 60px 120px;
 }
+}
+
 }
 #liensInternet .ic_linkedin {
 background-position: 0px -60px;
+&:hover {
+  background-position: -30px -60px;
+}
 }
 
 #liensInternet .ic_behance {
-background-position: 0px -90px;
+background-position: 0px -89px;
+&:hover {
+  background-position: -30px -89px;
+}
 }
 
 #liensInternet .ic_twitter {
 background-position: 0px -30px;
+&:hover {
+  background-position: -30px -30px;
+}
+
+#liensInternet .ic_facebook:hover {
+  background-position: -30px -60px;
+
+}
+
 }
 
 #footerSite {
@@ -1890,6 +1912,15 @@ code {
 
 #mesArticles {
     width: 94%;
+}
+
+.travaux li {
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  img {
+  width: 20em;
+}
 }
 
 }

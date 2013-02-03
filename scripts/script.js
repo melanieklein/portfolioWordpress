@@ -127,27 +127,5 @@
 			});
 	};
 
-	//Code pour le carousel des images de la page portfolio
-	$('#many li:first').before($('#many li:last'));
-	
-	$('#rightButton').click(function(){
-		var item_width = $('#many li').outerWidth()+19.6;
-		var left_indent = parseInt($('#many').css('left')) - item_width;
-
-		$('#many').animate({'left' : left_indent},{queue:false, duration:500},function(){
-			$('#many li:last').after($('#many li:first'));
-			$('#many').css({'left' : '-210px'});
-		});
-	});
-
-	$('#leftButton').click(function(){
-		var item_width = $('#many li').outerWidth() + 19.6;
-		var left_indent = parseInt($('#many').css('left')) + item_width;
-
-		$('#many').animate({'left' : left_indent},{queue:false,duration:500},function(){
-			$('#many li:first').before($('#many li:last'));
-			$('#many').css({'left' : '-210px'});
-		});
-	});
 	
 })(jQuery);

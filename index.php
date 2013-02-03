@@ -15,7 +15,7 @@ get_header();
 			
 			<div id="imageIntro">
 				<div>
-					<img src="http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2012/10/bonhommeOmg.png" alt="Oh mon dieu j'adore le design" title="Oh My God I Love Design" width="193" height="316" class="alignnone size-full wp-image-154" />
+					<img src="http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2013/02/bohommeOmg.png" alt="Oh mon dieu j'adore le design" title="Oh My God I Love Design" width="193" height="316" class="alignnone size-full wp-image-154" />
 				</div>
 			</div>		
 
@@ -54,7 +54,7 @@ get_header();
 					<p>Je vous invite à consulter mon <a href="portfolio">portfolio</a>, parcourir mon <a href="blog">blog</a> et à me <a href="contact">contacter</a> si
 						vous êtes intéressés par les services que je propose.</p>
 					<div id="imgLienPortfolio">
-            			<a href="portfolio"><img src="http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2012/11/imgFooter.png" width="150" height="150" alt="Voir tous mes projets - Portfolio de Mélanie Klein" title="Aller vers le portfolio" /></a>
+            			<a href="portfolio"><img src="http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2013/02/imgFooter.png" width="150" height="150" alt="Voir tous mes projets - Portfolio de Mélanie Klein" title="Aller vers le portfolio" /></a>
         			</div>
 				</section>	
 			</div>
@@ -69,7 +69,7 @@ get_header();
 					<p>J'ai d'autres passions comme la musique, le cinéma, la lecture. Je suis également des cours de guitare et je fais du sport deux fois par semaine.</p>
 				</div>
 				<div id="photoMoi">
-					<a href="contact"><img src="http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2012/10/moiVecto.png" alt="Portrait vectoriel de Mélanie Klein - lien vers page de contact" title="Contactez moi !" width="340" height="369" class="alignnone size-full wp-image-153" /></a>
+					<a href="contact"><img src="http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2013/02/moi.png" alt="Portrait vectoriel de Mélanie Klein - lien vers page de contact" title="Contactez moi !" width="340" height="369" class="alignnone size-full wp-image-153" /></a>
 				</div>
 			</div>
 		</section>
@@ -97,7 +97,7 @@ get_header();
 				</section>
 						
 				<div id="imageOrdinateur">
-					<a href="portfolio"><img src="http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2012/10/computerGraphicsDesign.png" alt="Computer Graphics Design - lien vers portfolio" title="Venez voir mon travail !" width="332" height="279" class="alignnone size-full wp-image-151" /></a>
+					<a href="portfolio"><img src="http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2013/02/computerImg.png" alt="Computer Graphics Design - lien vers portfolio" title="Venez voir mon travail !" width="332" height="279" class="alignnone size-full wp-image-151" /></a>
 				</div>
 						
 				<section id="programmation">

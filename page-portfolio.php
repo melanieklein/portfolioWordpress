@@ -17,7 +17,7 @@ get_header();
 				<section id="catWeb">
 					<h1 class="outliner">Mes travaux sur le web</h1>
 					<div class="introCat">
-						<img src="http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2013/01/catWeb.png" alt="Catégorie web" title="Catégorie web" width="220" height="220" class="iconeCat alignnone size-full wp-image-165" />
+						<img src="http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2013/02/catWeb.png" alt="Catégorie web" title="Catégorie web" width="220" height="220" class="iconeCat alignnone size-full wp-image-165" />
 						<div class="texteCat">
 							<p>Tu sais quoi&nbsp;? J'aime créer</p>
 							<p>de beaux sites ergonomiques&nbsp;!</p>
@@ -35,7 +35,7 @@ get_header();
 						$thumb = wp_get_attachment_image_src(get_post_thumbnail_id($postId->ID), 'full');
 						$url = $thumb['0'];
 						$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
-						add_image_size( 'portfolioSize', 200, 200, true );
+						add_image_size( 'portfolioSize', 233, auto);
 						?>
 						<li><a href="<?php the_permalink();?>"><?php the_post_thumbnail('portfolioSize');?></a></li>
 						<?php endwhile;
@@ -46,7 +46,7 @@ get_header();
 				<section id="catGraph">
 					<h1 class="outliner">Mes travaux de graphisme</h1>
 					<div class="introCat">
-						<img src="http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2013/01/catGraph.png" alt="Catégorie graphisme" title="Catégorie web" width="220" height="220" class="iconeCat alignnone size-full wp-image-165" />
+						<img src="http://ptfmela.dreamdesgn.com/wordpress/wp-content/uploads/2013/02/catGraph.png" alt="Catégorie graphisme" title="Catégorie web" width="220" height="220" class="iconeCat alignnone size-full wp-image-165" />
 						<div class="texteCat">
 							<p>Il y a plus&nbsp;! Je suis aussi douée</p>
 							<p>en graphisme et en mise en page</p>
@@ -63,7 +63,7 @@ get_header();
 						$postId = get_the_ID();
 						$thumb = wp_get_attachment_image_src(get_post_thumbnail_id($postId->ID), 'full');
 						$url = $thumb['0'];
-						add_image_size( 'portfolioSize', 200, 200, true );						
+						add_image_size( 'portfolioSize', 233, auto);						
 						?>
 						<li><a href="<?php the_permalink();?>"><?php the_post_thumbnail('portfolioSize');?></a></li>
 						<?php endwhile;
@@ -90,7 +90,7 @@ get_header();
 						$thumb = wp_get_attachment_image_src(get_post_thumbnail_id($postId->ID), 'full');
 						$url = $thumb['0'];
 						$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
-						add_image_size( 'portfolioSize', 200, 200, true );
+						add_image_size( 'portfolioSize', 233, auto);
 						?>
 						<li><a href="<?php the_permalink();?>"><?php the_post_thumbnail('portfolioSize');?></a></li>
 						<?php endwhile;
